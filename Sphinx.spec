@@ -4,7 +4,7 @@
 #
 Name     : Sphinx
 Version  : 1.2.3
-Release  : 17
+Release  : 18
 URL      : https://pypi.python.org/packages/source/S/Sphinx/Sphinx-1.2.3.tar.gz
 Source0  : https://pypi.python.org/packages/source/S/Sphinx/Sphinx-1.2.3.tar.gz
 Summary  : Python documentation generator
