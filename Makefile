@@ -1,4 +1,5 @@
 PKG_NAME := Sphinx
-URL := https://pypi.python.org/packages/source/S/Sphinx/Sphinx-1.2.3.tar.gz
+URL := http://pypi.debian.net/Sphinx/Sphinx-1.4.4.tar.gz
+ARCHIVES :=
 
 include ../common/Makefile.common
