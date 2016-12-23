@@ -4,7 +4,7 @@
 #
 Name     : Sphinx
 Version  : 1.4.8
-Release  : 25
+Release  : 26
 URL      : http://pypi.debian.net/Sphinx/Sphinx-1.4.8.tar.gz
 Source0  : http://pypi.debian.net/Sphinx/Sphinx-1.4.8.tar.gz
 Summary  : Python documentation generator
