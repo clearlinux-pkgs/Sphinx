@@ -4,7 +4,7 @@
 #
 Name     : Sphinx
 Version  : 1.2.3
-Release  : 29
+Release  : 30
 URL      : http://pypi.debian.net/Sphinx/Sphinx-1.2.3.tar.gz
 Source0  : http://pypi.debian.net/Sphinx/Sphinx-1.2.3.tar.gz
 Summary  : Python documentation generator
