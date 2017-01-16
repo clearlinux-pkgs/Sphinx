@@ -4,7 +4,7 @@
 #
 Name     : Sphinx
 Version  : 1.2.3
-Release  : 30
+Release  : 31
 URL      : http://pypi.debian.net/Sphinx/Sphinx-1.2.3.tar.gz
 Source0  : http://pypi.debian.net/Sphinx/Sphinx-1.2.3.tar.gz
 Summary  : Python documentation generator
@@ -54,13 +54,15 @@ python components for the Sphinx package.
 
 %build
 export LANG=C
+export SOURCE_DATE_EPOCH=1484575765
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
+export SOURCE_DATE_EPOCH=1484575765
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot}
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 
 %files
 %defattr(-,root,root,-)
