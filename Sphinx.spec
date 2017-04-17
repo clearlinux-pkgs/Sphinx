@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 1.5.3
-Release  : 35
-URL      : http://pypi.debian.net/Sphinx/Sphinx-1.5.3.tar.gz
-Source0  : http://pypi.debian.net/Sphinx/Sphinx-1.5.3.tar.gz
-Source99 : http://pypi.debian.net/Sphinx/Sphinx-1.5.3.tar.gz.asc
+Version  : 1.5.5
+Release  : 36
+URL      : https://pypi.debian.net/Sphinx/Sphinx-1.5.5.tar.gz
+Source0  : https://pypi.debian.net/Sphinx/Sphinx-1.5.5.tar.gz
+Source99 : https://pypi.debian.net/Sphinx/Sphinx-1.5.5.tar.gz.asc
 Summary  : Python documentation generator
 Group    : Development/Tools
 License  : Python-2.0
@@ -23,7 +23,7 @@ Requires: colorama
 Requires: docutils
 Requires: html5lib
 Requires: imagesize
-Requires: nose
+Requires: pytest
 Requires: python-mock
 Requires: requests
 Requires: simplejson
@@ -68,19 +68,22 @@ python components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-1.5.3
+%setup -q -n Sphinx-1.5.5
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1488570947
+export SOURCE_DATE_EPOCH=1492437999
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1488570947
+export SOURCE_DATE_EPOCH=1492437999
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+echo ----[ mark ]----
+cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
+echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
@@ -94,4 +97,5 @@ python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 
 %files python
 %defattr(-,root,root,-)
-/usr/lib/python*/*
+/usr/lib/python2*/*
+/usr/lib/python3*/*
