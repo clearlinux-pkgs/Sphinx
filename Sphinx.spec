@@ -5,14 +5,14 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 1.5.5
-Release  : 37
-URL      : https://pypi.debian.net/Sphinx/Sphinx-1.5.5.tar.gz
-Source0  : https://pypi.debian.net/Sphinx/Sphinx-1.5.5.tar.gz
-Source99 : https://pypi.debian.net/Sphinx/Sphinx-1.5.5.tar.gz.asc
+Version  : 1.5.6
+Release  : 38
+URL      : https://pypi.debian.net/Sphinx/Sphinx-1.5.6.tar.gz
+Source0  : https://pypi.debian.net/Sphinx/Sphinx-1.5.6.tar.gz
+Source99 : https://pypi.debian.net/Sphinx/Sphinx-1.5.6.tar.gz.asc
 Summary  : Python documentation generator
 Group    : Development/Tools
-License  : Python-2.0
+License  : BSD-3-Clause-Clear
 Requires: Sphinx-bin
 Requires: Sphinx-python
 Requires: Babel
@@ -68,16 +68,19 @@ python components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-1.5.5
+%setup -q -n Sphinx-1.5.6
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1492437999
+export SOURCE_DATE_EPOCH=1494864807
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1492437999
+export SOURCE_DATE_EPOCH=1494864807
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force

@@ -1,3 +1,23 @@
+Release 1.5.6 (released May 15, 2017)
+=====================================
+
+Bugs fixed
+----------
+
+* #3614: Sphinx crashes with requests-2.5.0
+* #3618: autodoc crashes with tupled arguments
+* #3664: No space after the bullet in items of a latex list produced by Sphinx
+* #3657: EPUB builder crashes if document startswith genindex exists
+* #3588: No compact (p tag) html output in the i18n document build even when
+  :confval:`html_compact_lists` is True.
+* #3685: AttributeError when using 3rd party domains
+* #3702: LaTeX writer styles figure legends with a hard-coded ``\small``
+* #3708: LaTeX writer allows irc scheme
+* #3717: Stop enforcing that favicon's must be .ico
+* #3731, #3732: Protect isenumclass predicate against non-class arguments
+* #3320: Warning about reference target not being found for container types
+* Misspelled ARCHIVEPREFIX in Makefile for latex build repertory
+
 Release 1.5.5 (released Apr 03, 2017)
 =====================================
 
@@ -192,10 +212,8 @@ Incompatible changes
 * QtHelpBuilder doens't generate search page (ref: #2352)
 * QtHelpBuilder uses ``nonav`` theme instead of default one
   to improve readability.
-* latex: To provide good default settings to Japanese docs, Sphinx uses ``jsbook``
-  as a docclass by default if the ``language`` is ``ja``.
-* latex: To provide good default settings to Japanese docs, Sphinx uses
-  ``jreport`` and ``jsbooks`` as a docclass by default if the ``language`` is
+* latex: To provide good default settings to Japanese documents, Sphinx uses
+  ``jreport`` and ``jsbook`` as docclass if :confval:`language` is
   ``ja``.
 * ``sphinx-quickstart`` now allows a project version is empty
 * Fix :download: role on epub/qthelp builder. They ignore the role because they don't support it.
@@ -233,6 +251,7 @@ Incompatible changes
 * Emit warnings that will be deprecated in Sphinx 1.6 by default.
   Users can change the behavior by setting the environment variable
   PYTHONWARNINGS. Please refer :ref:`when-deprecation-warnings-are-displayed`.
+* #2454: new JavaScript variable ``SOURCELINK_SUFFIX`` is added
 
 Deprecated
 ----------
