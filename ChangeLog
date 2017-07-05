@@ -1,3 +1,44 @@
+Release 1.6.3 (released Jul 02, 2017)
+=====================================
+
+Features added
+--------------
+
+* latex: hint that code-block continues on next page (refs: #3764, #3792)
+
+Bugs fixed
+----------
+
+* #3821: Failed to import sphinx.util.compat with docutils-0.14rc1
+* #3829: sphinx-quickstart template is incomplete regarding use of alabaster
+* #3772: 'str object' has no attribute 'filename'
+* Emit wrong warnings if citation label includes hyphens (refs: #3565)
+* #3858: Some warnings are not colored when using --color option
+* #3775: Remove unwanted whitespace in default template
+* #3835: sphinx.ext.imgmath fails to convert SVG images if project directory
+  name contains spaces
+* #3850: Fix color handling in make mode's help command
+* #3865: use of self.env.warn in sphinx extension fails
+* #3824: production lists apply smart quotes transform since Sphinx 1.6.1
+* latex: fix ``\sphinxbfcode`` swallows initial space of argument
+* #3878: Quotes in auto-documented class attributes should be straight quotes
+  in PDF output
+* #3881: LaTeX figure floated to next page sometimes leaves extra vertical
+  whitespace
+* #3885: duplicated footnotes raises IndexError
+* #3873: Failure of deprecation warning mechanism of
+  ``sphinx.util.compat.Directive``
+* #3874: Bogus warnings for "citation not referenced" for cross-file citations
+* #3860: Don't download images when builders not supported images
+* #3860: Remote image URIs without filename break builders not supported remote
+  images
+* #3833: command line messages are translated unintentionally with ``language``
+  setting.
+* #3840: make checking ``epub_uid`` strict
+* #3851, #3706: Fix about box drawing characters for PDF output
+* #3900: autosummary could not find methods
+* #3902: Emit error if ``latex_documents`` contains non-unicode string in py2
+
 Release 1.6.2 (released May 28, 2017)
 =====================================
 
@@ -21,7 +62,6 @@ Bugs fixed
 * #3770: Build fails when a "code-block" has the option emphasize-lines and the
   number indicated is higher than the number of lines
 * #3774: Incremental HTML building broken when using citations
-* #3772: 'str object' has no attribute 'filename'
 * #3763: got epubcheck validations error if epub_cover is set
 * #3779: 'ImportError' in sphinx.ext.autodoc due to broken 'sys.meta_path'.
   Thanks to Tatiana Tereshchenko.
@@ -210,6 +250,8 @@ Bugs fixed
 * #3661: sphinx-build crashes on parallel build
 * #3669: gettext builder fails with "ValueError: substring not found"
 * #3660: Sphinx always depends on sphinxcontrib-websupport and its dependencies
+* #3472: smart quotes getting wrong in latex (at least with list of strings via
+  autoattribute) (refs: #3345, #3666)
 
 1.6b3
 
@@ -244,7 +286,7 @@ Deprecated
 1.6b1
 
 * ``sphinx.util.compat.Directive`` class is now deprecated. Please use instead
-  ``docutils.parsers.rsr.Directive``
+  ``docutils.parsers.rst.Directive``
 * ``sphinx.util.compat.docutils_version`` is now deprecated
 * #2367: ``Sphinx.warn()``, ``Sphinx.info()`` and other logging methods are now
   deprecated.  Please use ``sphinx.util.logging`` (:ref:`logging-api`) instead.
