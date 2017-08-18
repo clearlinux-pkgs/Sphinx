@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 1.6.3
-Release  : 41
+Release  : 42
 URL      : https://pypi.debian.net/Sphinx/Sphinx-1.6.3.tar.gz
 Source0  : https://pypi.debian.net/Sphinx/Sphinx-1.6.3.tar.gz
 Source99 : https://pypi.debian.net/Sphinx/Sphinx-1.6.3.tar.gz.asc
@@ -51,7 +51,16 @@ BuildRequires : tox
 BuildRequires : virtualenv
 
 %description
-This whole directory is there to test html_static_path.
+Sphinx is a tool that makes it easy to create intelligent and beautiful
+        documentation for Python projects (or other documents consisting of multiple
+        reStructuredText sources), written by Georg Brandl.  It was originally created
+        for the new Python documentation, and has excellent facilities for Python
+        project documentation, but C/C++ is supported as well, and more languages are
+        planned.
+        
+        Sphinx uses reStructuredText as its markup language, and many of its strengths
+        come from the power and straightforwardness of reStructuredText and its parsing
+        and translating suite, the Docutils.
 
 %package bin
 Summary: bin components for the Sphinx package.
@@ -78,12 +87,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1499271318
+export SOURCE_DATE_EPOCH=1503080471
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1499271318
+export SOURCE_DATE_EPOCH=1503080471
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
