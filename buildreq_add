@@ -10,3 +10,4 @@ MarkupSafe
 nose
 Whoosh
 typing
+sphinxcontrib-websupport
