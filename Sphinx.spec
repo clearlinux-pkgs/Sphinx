@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 1.6.3
-Release  : 45
+Release  : 46
 URL      : https://pypi.debian.net/Sphinx/Sphinx-1.6.3.tar.gz
 Source0  : https://pypi.debian.net/Sphinx/Sphinx-1.6.3.tar.gz
 Source99 : https://pypi.debian.net/Sphinx/Sphinx-1.6.3.tar.gz.asc
@@ -101,12 +101,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505071712
+export SOURCE_DATE_EPOCH=1505451173
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1505071712
+export SOURCE_DATE_EPOCH=1505451173
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
