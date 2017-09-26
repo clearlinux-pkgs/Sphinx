@@ -1,3 +1,36 @@
+Release 1.6.4 (released Sep 26, 2017)
+=====================================
+
+Features added
+--------------
+
+* #3926: Add ``autodoc_warningiserror`` to suppress the behavior of ``-W``
+  option during importing target modules on autodoc
+
+Bugs fixed
+----------
+
+* #3924: docname lost after dynamically parsing RST in extension
+* #3946: Typo in sphinx.sty (this was a bug with no effect in default context)
+* :pep: and :rfc: does not supports ``default-role`` directive (refs: #3960)
+* #3960: default_role = 'guilabel' not functioning
+* Missing ``texinputs_win/Makefile`` to be used in latexpdf builder on windows.
+* #4026: nature: Fix macOS Safari scrollbar color
+* #3877: Fix for C++ multiline signatures.
+* #4006: Fix crash on parallel build
+* #3969: private instance attributes causes AttributeError
+* #4041: C++, remove extra name linking in function pointers.
+* #4038: C, add missing documentation of ``member`` role.
+* #4044: An empty multicolumn cell causes extra row height in PDF output
+* #4049: Fix typo in output of sphinx-build -h
+* #4062: hashlib.sha1() must take bytes, not unicode on Python 3
+* Avoid indent after index entries in latex (refs: #4066)
+* #4070: crashes when the warning message contains format strings
+* #4067: Return non-zero exit status when make subprocess fails
+* #4055: graphviz: the :align: option does not work for SVG output
+* #4055: graphviz: the :align: center option does not work for latex output
+* #4051: ``warn()`` function for HTML theme outputs 'None' string
+
 Release 1.6.3 (released Jul 02, 2017)
 =====================================
 
