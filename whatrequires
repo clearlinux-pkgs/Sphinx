@@ -4,5 +4,7 @@ Sphinx
 Theano
 compat-llvm-soname4
 darktable
+libdnf
 llvm
 pytest-cov
+satyr

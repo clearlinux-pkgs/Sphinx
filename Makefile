@@ -1,5 +1,5 @@
 PKG_NAME := Sphinx
-URL := https://pypi.debian.net/Sphinx/Sphinx-1.6.4.tar.gz
+URL := https://pypi.debian.net/Sphinx/Sphinx-1.6.5.tar.gz
 
 
 include ../common/Makefile.common

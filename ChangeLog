@@ -1,3 +1,37 @@
+Release 1.6.5 (released Oct 23, 2017)
+=====================================
+
+Features added
+--------------
+
+* #4107: Make searchtools.js compatible with pre-Sphinx1.5 templates
+* #4112: Don't override the smart_quotes setting if it was already set
+* #4125: Display reference texts of original and translated passages on
+  i18n warning message
+* #4147: Include the exception when logging PO/MO file read/write
+
+Bugs fixed
+----------
+
+* #4085: Failed PDF build from image in parsed-literal using ``:align:`` option
+* #4100: Remove debug print from autodoc extension
+* #3987: Changing theme from alabaster causes HTML build to fail
+* #4096: C++, don't crash when using the wrong role type. Thanks to mitya57.
+* #4070, #4111: crashes when the warning message contains format strings (again)
+* #4108: Search word highlighting breaks SVG images
+* #3692: Unable to build HTML if writing .buildinfo failed
+* #4152: HTML writer crashes if a field list is placed on top of the document
+* #4063: Sphinx crashes when labeling directive ``.. todolist::``
+* #4134: [doc] :file:`docutils.conf` is not documented explicitly
+* #4169: Chinese language doesn't trigger Chinese search automatically
+* #1020: ext.todo todolist not linking to the page in pdflatex
+* #3965: New quickstart generates wrong SPHINXBUILD in Makefile
+* #3739: ``:module:`` option is ignored at content of pyobjects
+* #4149: Documentation: Help choosing :confval:`latex_engine`
+* #4090: [doc] :confval:`latex_additional_files` with extra LaTeX macros should
+  not use ``.tex`` extension
+* Failed to convert reST parser error to warning (refs: #4132)
+
 Release 1.6.4 (released Sep 26, 2017)
 =====================================
 
