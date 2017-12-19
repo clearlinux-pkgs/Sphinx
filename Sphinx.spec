@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 1.6.5
-Release  : 52
+Release  : 53
 URL      : https://pypi.debian.net/Sphinx/Sphinx-1.6.5.tar.gz
 Source0  : https://pypi.debian.net/Sphinx/Sphinx-1.6.5.tar.gz
 Source99 : https://pypi.debian.net/Sphinx/Sphinx-1.6.5.tar.gz.asc
