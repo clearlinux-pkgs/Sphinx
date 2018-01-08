@@ -1,3 +1,54 @@
+Release 1.6.6 (released Jan 08, 2018)
+=====================================
+
+Dependencies
+------------
+
+Incompatible changes
+--------------------
+
+Deprecated
+----------
+
+Features added
+--------------
+
+* #4181: autodoc: Sort dictionary keys when possible
+* ``VerbatimHighlightColor`` is a new
+  :ref:`LaTeX 'sphinxsetup' <latexsphinxsetup>` key (refs: #4285)
+* Easier customizability of LaTeX macros involved in rendering of code-blocks
+* Show traceback if conf.py raises an exception (refs: #4369)
+* Add :confval:`smartquotes` to disable smart quotes through ``conf.py``
+  (refs: #3967)
+* Add :confval:`smartquotes_action` and :confval:`smartquotes_excludes`
+  (refs: #4142, #4357)
+
+Bugs fixed
+----------
+
+* #4334: sphinx-apidoc: Don't generate references to non-existing files in TOC
+* #4206: latex: reST label between paragraphs loses paragraph break
+* #4231: html: Apply fixFirefoxAnchorBug only under Firefox
+* #4221: napoleon depends on autodoc, but users need to load it manually
+* #2298: automodule fails to document a class attribute
+* #4099: C++: properly link class reference to class from inside constructor
+* #4267: PDF build broken by Unicode U+2116 NUMERO SIGN character
+* #4249: PDF output: Pygments error highlighting increases line spacing in
+  code blocks
+* #1238: Support ``:emphasize-lines:`` in PDF output
+* #4279: Sphinx crashes with pickling error when run with multiple processes and
+  remote image
+* #1421: Respect the quiet flag in sphinx-quickstart
+* #4281: Race conditions when creating output directory
+* #4315: For PDF 'howto' documents, ``latex_toplevel_sectioning='part'`` generates
+  ``\chapter`` commands 
+* #4214: Two todolist directives break sphinx-1.6.5
+* Fix links to external option docs with intersphinx (refs: #3769)
+* #4091: Private members not documented without :undoc-members:
+
+Testing
+--------
+
 Release 1.6.5 (released Oct 23, 2017)
 =====================================
 
