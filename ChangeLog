@@ -1,14 +1,27 @@
-Release 1.6.6 (released Jan 08, 2018)
+Release 1.6.7 (released Feb 04, 2018)
 =====================================
 
-Dependencies
-------------
-
-Incompatible changes
---------------------
-
-Deprecated
+Bugs fixed
 ----------
+
+* #1922: html search: Upper characters problem in French
+* #4412: Updated jQuery version from 3.1.0 to 3.2.1
+* #4438: math: math with labels with whitespace cause html error
+* #2437: make full reference for classes, aliased with "alias of"
+* #4434: pure numbers as link targets produce warning
+* #4477: Build fails after building specific files
+* #4449: apidoc: include "empty" packages that contain modules
+* #3917: citation labels are tranformed to ellipsis
+* #4501: graphviz: epub3 validation error caused if graph is not clickable
+* #4514: graphviz: workaround for wrong map ID which graphviz generates
+* #4525: autosectionlabel does not support parallel build
+* #3953: Do not raise warning when there is a working intersphinx inventory
+* #4487: math: ValueError is raised on parallel build. Thanks to jschueller.
+* #2372: autosummary: invalid signatures are shown for type annotated functions
+* #3942: html: table is not aligned to center even if ``:align: center``
+
+Release 1.6.6 (released Jan 08, 2018)
+=====================================
 
 Features added
 --------------
@@ -45,9 +58,6 @@ Bugs fixed
 * #4214: Two todolist directives break sphinx-1.6.5
 * Fix links to external option docs with intersphinx (refs: #3769)
 * #4091: Private members not documented without :undoc-members:
-
-Testing
---------
 
 Release 1.6.5 (released Oct 23, 2017)
 =====================================
