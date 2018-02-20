@@ -7,7 +7,7 @@ compat-llvm-soname4
 darktable
 libdnf
 llvm
+nbsphinx
 numpydoc
 pytest-cov
 satyr
-spyder
