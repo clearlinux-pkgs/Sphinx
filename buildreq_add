@@ -11,3 +11,5 @@ nose
 Whoosh
 typing
 sphinxcontrib-websupport
+setuptools-python
+setuptools-legacypython

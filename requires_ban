@@ -3,3 +3,5 @@
 python-mock
 pytest-cov
 pytest
+enum34
+flake8
