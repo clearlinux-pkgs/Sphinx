@@ -1,15 +1,47 @@
+Release 1.7.2 (released Mar 21, 2018)
+=====================================
+
+Incompatible changes
+--------------------
+* #4520: apidoc: folders with an empty __init__.py are no longer excluded from
+  TOC
+
+Bugs fixed
+----------
+
+* #4669: sphinx.build_main and sphinx.make_main throw NameError
+* #4685: autosummary emits meaningless warnings
+* autodoc: crashed when invalid options given
+* pydomain: always strip parenthesis if empty (refs: #1042)
+* #4689: autosummary: unexpectedly strips docstrings containing "i.e."
+* #4701: viewcode: Misplaced ``<div>`` in viewcode html output
+* #4444: Don't require numfig to use :numref: on sections
+* #4727: Option clash for package textcomp
+* #4725: Sphinx does not work with python 3.5.0 and 3.5.1
+* #4716: Generation PDF file with TexLive on Windows, file not found error
+* #4574: vertical space before equation in latex
+* #4720: message when an image is mismatched for builder is not clear
+* #4655, #4684: Incomplete localization strings in Polish and Chinese
+* #2286: Sphinx crashes when error is happens in rendering HTML pages
+* #4688: Error to download remote images having long URL
+* #4754: sphinx/pycode/__init__.py raises AttributeError
+* #1435: qthelp builder should htmlescape keywords
+* epub: Fix docTitle elements of toc.ncx is not escaped
+* #4520: apidoc: Subpackage not in toc (introduced in 1.6.6) now fixed
+
 Release 1.7.1 (released Feb 23, 2018)
 =====================================
 
 Deprecated
 ----------
 
-* #4623: ``sphinx.build_main()`` is deprecated. Use
-  ``sphinx.cmd.build.build_main()`` instead.
+* #4623: ``sphinx.build_main()`` is deprecated.
 * autosummary: The interface of ``sphinx.ext.autosummary.get_documenter()`` has
   been changed (Since 1.7.0)
-* #4664: ``sphinx.ext.intersphinx.debug()`` is deprecated. Use
-  ``sphinx.ext.intersphinx.inspect_main()`` instead.
+* #4664: ``sphinx.ext.intersphinx.debug()`` is deprecated.
+
+For more details, see `deprecation APIs list
+<http://www.sphinx-doc.org/en/master/extdev/index.html#deprecated-apis>`_
 
 Bugs fixed
 ----------
