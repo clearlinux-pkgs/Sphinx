@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 1.7.2
-Release  : 69
+Release  : 70
 URL      : https://pypi.debian.net/Sphinx/Sphinx-1.7.2.tar.gz
 Source0  : https://pypi.debian.net/Sphinx/Sphinx-1.7.2.tar.gz
 Source99 : https://pypi.debian.net/Sphinx/Sphinx-1.7.2.tar.gz.asc
@@ -14,6 +14,7 @@ Summary  : Python documentation generator
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: Sphinx-bin
+Requires: Sphinx-legacypython
 Requires: Sphinx-python3
 Requires: Sphinx-python
 Requires: Babel
@@ -75,6 +76,15 @@ Group: Binaries
 bin components for the Sphinx package.
 
 
+%package legacypython
+Summary: legacypython components for the Sphinx package.
+Group: Default
+Requires: python-core
+
+%description legacypython
+legacypython components for the Sphinx package.
+
+
 %package python
 Summary: python components for the Sphinx package.
 Group: Default
@@ -102,12 +112,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523556606
+export SOURCE_DATE_EPOCH=1523647063
+python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
+export SOURCE_DATE_EPOCH=1523647063
 rm -rf %{buildroot}
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -121,6 +134,10 @@ echo ----[ mark ]----
 /usr/bin/sphinx-autogen
 /usr/bin/sphinx-build
 /usr/bin/sphinx-quickstart
+
+%files legacypython
+%defattr(-,root,root,-)
+/usr/lib/python2*/*
 
 %files python
 %defattr(-,root,root,-)
