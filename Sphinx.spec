@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 1.7.3
-Release  : 71
+Release  : 72
 URL      : https://pypi.debian.net/Sphinx/Sphinx-1.7.3.tar.gz
 Source0  : https://pypi.debian.net/Sphinx/Sphinx-1.7.3.tar.gz
 Source99 : https://pypi.debian.net/Sphinx/Sphinx-1.7.3.tar.gz.asc
