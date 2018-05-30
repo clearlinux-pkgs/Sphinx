@@ -1,3 +1,39 @@
+Release 1.7.5 (released May 29, 2018)
+=====================================
+
+Bugs fixed
+----------
+
+* #4924: html search: Upper characters problem in any other languages
+* #4932: apidoc: some subpackage is ignored if sibling subpackage contains a
+  module starting with underscore
+* #4863, #4938, #4939: i18n doesn't handle node.title correctly tat used for
+  contents, topic, admonition, table and section.
+* #4913: i18n: literal blocks in bullet list are not translated
+* #4962: C++, raised TypeError on duplicate declaration.
+* #4825: C++, properly parse expr roles and give better error messages when
+  (escaped) line breaks are present.
+* C++, properly use ``desc_addname`` nodes for prefixes of names.
+* C++, parse pack expansions in function calls.
+* #4915, #4916: links on search page are broken when using dirhtml builder
+* #4969: autodoc: constructor method should not have return annotation
+* latex: deeply nested enumerated list which is beginning with non-1 causes
+  LaTeX engine crashed
+* #4978: latex: shorthandoff is not set up for Brazil locale
+* #4928: i18n: Ignore dot-directories like .git/ in LC_MESSAGES/
+* #4946: py domain: type field could not handle "None" as a type
+* #4979: latex: Incorrect escaping of curly braces in index entries
+* #4956: autodoc: Failed to extract document from a subclass of the class on
+  mocked module
+* #4973: latex: glossary directive adds whitespace to each item
+* #4980: latex: Explicit labels on code blocks are duplicated
+* #4919: node.asdom() crashes if toctree has :numbered: option
+* #4914: autodoc: Parsing error when using dataclasses without default values
+* #4931: autodoc: crashed when handler for autodoc-skip-member raises an error
+* #4931: autodoc: crashed when subclass of mocked class are processed by
+  napoleon module
+* #5007: sphinx-build crashes when error log contains a "%" character
+
 Release 1.7.4 (released Apr 25, 2018)
 =====================================
 
