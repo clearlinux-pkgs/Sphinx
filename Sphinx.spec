@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 1.7.5
-Release  : 78
+Release  : 79
 URL      : https://pypi.debian.net/Sphinx/Sphinx-1.7.5.tar.gz
 Source0  : https://pypi.debian.net/Sphinx/Sphinx-1.7.5.tar.gz
 Source99 : https://pypi.debian.net/Sphinx/Sphinx-1.7.5.tar.gz.asc
@@ -15,6 +15,7 @@ Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: Sphinx-bin
 Requires: Sphinx-python3
+Requires: Sphinx-license
 Requires: Sphinx-python
 Requires: Babel
 Requires: Jinja2
@@ -51,10 +52,12 @@ BuildRequires : pluggy
 BuildRequires : py
 BuildRequires : py-python
 BuildRequires : pytest
-
+BuildRequires : python-core
+BuildRequires : python3-core
 BuildRequires : python3-dev
 BuildRequires : requests
 BuildRequires : setuptools
+BuildRequires : setuptools-legacypython
 BuildRequires : setuptools-python
 BuildRequires : six
 BuildRequires : snowballstemmer
@@ -70,6 +73,7 @@ Sphinx
 %package bin
 Summary: bin components for the Sphinx package.
 Group: Binaries
+Requires: Sphinx-license
 
 %description bin
 bin components for the Sphinx package.
@@ -82,6 +86,14 @@ Requires: python-core
 
 %description legacypython
 legacypython components for the Sphinx package.
+
+
+%package license
+Summary: license components for the Sphinx package.
+Group: Default
+
+%description license
+license components for the Sphinx package.
 
 
 %package python
@@ -111,13 +123,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1527654942
+export SOURCE_DATE_EPOCH=1530377486
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1527654942
+export SOURCE_DATE_EPOCH=1530377486
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/Sphinx
+cp LICENSE %{buildroot}/usr/share/doc/Sphinx/LICENSE
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 echo ----[ mark ]----
@@ -137,6 +151,10 @@ echo ----[ mark ]----
 %files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/Sphinx/LICENSE
 
 %files python
 %defattr(-,root,root,-)
