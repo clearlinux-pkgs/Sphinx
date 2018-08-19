@@ -1,3 +1,27 @@
+Release 1.7.7 (released Aug 19, 2018)
+=====================================
+
+Bugs fixed
+----------
+
+* #5198: document not in toctree warning when including files only for parallel
+  builds
+* LaTeX: reduce "Token not allowed in a PDF string" hyperref warnings in latex
+  console output (refs: #5236)
+* LaTeX: suppress "remreset Warning: The remreset package is obsolete" in latex
+  console output with recent LaTeX (refs: #5237)
+* #5234: PDF output: usage of PAPER environment variable is broken since Sphinx
+  1.5
+* LaTeX: fix the :confval:`latex_engine` documentation regarding Latin Modern
+  font with XeLaTeX/LuaLateX (refs: #5251)
+* #5280: autodoc: Fix wrong type annotations for complex typing
+* autodoc: Optional types are wrongly rendered
+* #5291: autodoc crashed by ForwardRef types
+* #5211: autodoc: No docs generated for functools.partial functions
+* #5306: autodoc: ``getargspec()`` raises NameError for invalid typehints
+* #5298: imgmath: math_number_all causes equations to have two numbers in html
+* #5294: sphinx-quickstart blank prompts in PowerShell
+
 Release 1.7.6 (released Jul 17, 2018)
 =====================================
 
