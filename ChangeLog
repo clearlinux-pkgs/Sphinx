@@ -1,3 +1,16 @@
+Release 1.7.9 (released Sep 05, 2018)
+=====================================
+
+Features added
+--------------
+
+* #5359: Make generated texinfo files reproducible by sorting the anchors
+
+Bugs fixed
+----------
+
+* #5361: crashed on incremental build if document uses include directive
+
 Release 1.7.8 (released Aug 29, 2018)
 =====================================
 
