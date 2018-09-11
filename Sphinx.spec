@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 1.7.9
-Release  : 86
+Release  : 87
 URL      : https://files.pythonhosted.org/packages/90/11/d31b44f273f9dcdf58a36d9b21542ee71cb57e358214cc8f88d0469c85e9/Sphinx-1.7.9.tar.gz
 Source0  : https://files.pythonhosted.org/packages/90/11/d31b44f273f9dcdf58a36d9b21542ee71cb57e358214cc8f88d0469c85e9/Sphinx-1.7.9.tar.gz
 Source99 : https://files.pythonhosted.org/packages/90/11/d31b44f273f9dcdf58a36d9b21542ee71cb57e358214cc8f88d0469c85e9/Sphinx-1.7.9.tar.gz.asc
@@ -30,6 +30,7 @@ Requires: html5lib
 Requires: imagesize
 Requires: mypy
 Requires: packaging
+Requires: recommonmark
 Requires: requests
 Requires: setuptools
 Requires: six
@@ -54,6 +55,7 @@ BuildRequires : pluggy
 BuildRequires : py
 BuildRequires : py-python
 BuildRequires : pytest
+BuildRequires : recommonmark
 BuildRequires : requests
 BuildRequires : setuptools
 BuildRequires : setuptools-python
@@ -121,12 +123,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536195000
+export SOURCE_DATE_EPOCH=1536660870
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1536195000
+export SOURCE_DATE_EPOCH=1536660870
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/Sphinx
 cp LICENSE %{buildroot}/usr/share/doc/Sphinx/LICENSE
