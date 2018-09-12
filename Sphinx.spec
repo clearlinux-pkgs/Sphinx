@@ -5,14 +5,14 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 1.7.9
-Release  : 87
-URL      : https://files.pythonhosted.org/packages/90/11/d31b44f273f9dcdf58a36d9b21542ee71cb57e358214cc8f88d0469c85e9/Sphinx-1.7.9.tar.gz
-Source0  : https://files.pythonhosted.org/packages/90/11/d31b44f273f9dcdf58a36d9b21542ee71cb57e358214cc8f88d0469c85e9/Sphinx-1.7.9.tar.gz
-Source99 : https://files.pythonhosted.org/packages/90/11/d31b44f273f9dcdf58a36d9b21542ee71cb57e358214cc8f88d0469c85e9/Sphinx-1.7.9.tar.gz.asc
+Version  : 1.8.0
+Release  : 88
+URL      : https://files.pythonhosted.org/packages/52/f2/eb65961b97479eec6f89f53572113cb8bd5df70ed93c50a630a5b1bf5598/Sphinx-1.8.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/52/f2/eb65961b97479eec6f89f53572113cb8bd5df70ed93c50a630a5b1bf5598/Sphinx-1.8.0.tar.gz
+Source99 : https://files.pythonhosted.org/packages/52/f2/eb65961b97479eec6f89f53572113cb8bd5df70ed93c50a630a5b1bf5598/Sphinx-1.8.0.tar.gz.asc
 Summary  : Python documentation generator
 Group    : Development/Tools
-License  : BSD-3-Clause
+License  : BSD-2-Clause BSD-3-Clause MIT
 Requires: Sphinx-bin
 Requires: Sphinx-python3
 Requires: Sphinx-license
@@ -30,6 +30,7 @@ Requires: html5lib
 Requires: imagesize
 Requires: mypy
 Requires: packaging
+Requires: python-future
 Requires: recommonmark
 Requires: requests
 Requires: setuptools
@@ -116,19 +117,19 @@ python3 components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-1.7.9
+%setup -q -n Sphinx-1.8.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536660870
+export SOURCE_DATE_EPOCH=1536774759
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1536660870
+export SOURCE_DATE_EPOCH=1536774759
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/Sphinx
 cp LICENSE %{buildroot}/usr/share/doc/Sphinx/LICENSE

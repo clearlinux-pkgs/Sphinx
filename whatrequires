@@ -15,6 +15,7 @@ notmuch
 numpy
 numpydoc
 pytest-cov
+recommonmark
 satyr
 scipy
 sphinx_rtd_theme
