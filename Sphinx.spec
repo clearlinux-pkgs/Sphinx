@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 1.8.0
-Release  : 88
-URL      : https://files.pythonhosted.org/packages/52/f2/eb65961b97479eec6f89f53572113cb8bd5df70ed93c50a630a5b1bf5598/Sphinx-1.8.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/52/f2/eb65961b97479eec6f89f53572113cb8bd5df70ed93c50a630a5b1bf5598/Sphinx-1.8.0.tar.gz
-Source99 : https://files.pythonhosted.org/packages/52/f2/eb65961b97479eec6f89f53572113cb8bd5df70ed93c50a630a5b1bf5598/Sphinx-1.8.0.tar.gz.asc
+Version  : 1.8.1
+Release  : 89
+URL      : https://files.pythonhosted.org/packages/c7/e9/b1bed881847680cecc70159b8b9d5fd1cd4e85627c534712c2c7b339f8b6/Sphinx-1.8.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/c7/e9/b1bed881847680cecc70159b8b9d5fd1cd4e85627c534712c2c7b339f8b6/Sphinx-1.8.1.tar.gz
+Source99 : https://files.pythonhosted.org/packages/c7/e9/b1bed881847680cecc70159b8b9d5fd1cd4e85627c534712c2c7b339f8b6/Sphinx-1.8.1.tar.gz.asc
 Summary  : Python documentation generator
 Group    : Development/Tools
 License  : BSD-2-Clause BSD-3-Clause MIT
@@ -74,7 +74,7 @@ Sphinx
 %package bin
 Summary: bin components for the Sphinx package.
 Group: Binaries
-Requires: Sphinx-license
+Requires: Sphinx-license = %{version}-%{release}
 
 %description bin
 bin components for the Sphinx package.
@@ -100,7 +100,7 @@ license components for the Sphinx package.
 %package python
 Summary: python components for the Sphinx package.
 Group: Default
-Requires: Sphinx-python3
+Requires: Sphinx-python3 = %{version}-%{release}
 Provides: sphinx-python
 
 %description python
@@ -117,19 +117,19 @@ python3 components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-1.8.0
+%setup -q -n Sphinx-1.8.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536774759
+export SOURCE_DATE_EPOCH=1537639941
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1536774759
+export SOURCE_DATE_EPOCH=1537639941
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/Sphinx
 cp LICENSE %{buildroot}/usr/share/doc/Sphinx/LICENSE
