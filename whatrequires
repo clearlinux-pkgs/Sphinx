@@ -4,6 +4,7 @@ Theano
 casync
 compat-hyperscan-soname4
 compat-llvm-soname4
+compat-llvm-soname6
 cyrus-sasl
 extra-cmake-modules
 hyperscan
@@ -16,8 +17,10 @@ numpy
 numpydoc
 pytest-cov
 recommonmark
+repoze.sphinx.autointerface
 satyr
 scipy
 sphinx_rtd_theme
 suricata
 systemd-netlogd
+varnish-cache

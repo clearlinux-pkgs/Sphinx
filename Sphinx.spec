@@ -6,29 +6,25 @@
 #
 Name     : Sphinx
 Version  : 1.8.1
-Release  : 90
+Release  : 91
 URL      : https://files.pythonhosted.org/packages/c7/e9/b1bed881847680cecc70159b8b9d5fd1cd4e85627c534712c2c7b339f8b6/Sphinx-1.8.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c7/e9/b1bed881847680cecc70159b8b9d5fd1cd4e85627c534712c2c7b339f8b6/Sphinx-1.8.1.tar.gz
 Source99 : https://files.pythonhosted.org/packages/c7/e9/b1bed881847680cecc70159b8b9d5fd1cd4e85627c534712c2c7b339f8b6/Sphinx-1.8.1.tar.gz.asc
 Summary  : Python documentation generator
 Group    : Development/Tools
 License  : BSD-2-Clause BSD-3-Clause MIT
-Requires: Sphinx-bin
-Requires: Sphinx-python3
-Requires: Sphinx-license
-Requires: Sphinx-python
+Requires: Sphinx-bin = %{version}-%{release}
+Requires: Sphinx-license = %{version}-%{release}
+Requires: Sphinx-python = %{version}-%{release}
+Requires: Sphinx-python3 = %{version}-%{release}
 Requires: Babel
 Requires: Jinja2
 Requires: Pygments
-Requires: SQLAlchemy
 Requires: Whoosh
 Requires: alabaster
 Requires: colorama
 Requires: docutils
-Requires: flake8-import-order
-Requires: html5lib
 Requires: imagesize
-Requires: mypy
 Requires: packaging
 Requires: python-future
 Requires: recommonmark
@@ -124,15 +120,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1537639941
+export SOURCE_DATE_EPOCH=1541279017
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1537639941
+export SOURCE_DATE_EPOCH=1541279017
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/Sphinx
-cp LICENSE %{buildroot}/usr/share/doc/Sphinx/LICENSE
+mkdir -p %{buildroot}/usr/share/package-licenses/Sphinx
+cp LICENSE %{buildroot}/usr/share/package-licenses/Sphinx/LICENSE
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 echo ----[ mark ]----
@@ -154,8 +150,8 @@ echo ----[ mark ]----
 /usr/lib/python2*/*
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/Sphinx/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/Sphinx/LICENSE
 
 %files python
 %defattr(-,root,root,-)
