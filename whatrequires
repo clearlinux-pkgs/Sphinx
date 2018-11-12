@@ -21,6 +21,7 @@ repoze.sphinx.autointerface
 satyr
 scipy
 sphinx_rtd_theme
+sphinxcontrib-programoutput
 suricata
 systemd-netlogd
 varnish-cache
