@@ -15,6 +15,8 @@ nbsphinx
 notmuch
 numpy
 numpydoc
+openvswitch
+pyside2-setup
 pytest-cov
 recommonmark
 repoze.sphinx.autointerface
