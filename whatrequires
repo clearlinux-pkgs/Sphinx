@@ -24,6 +24,7 @@ satyr
 scipy
 sphinx_rtd_theme
 sphinxcontrib-programoutput
+sphinxcontrib-spelling
 sphinxcontrib-trio
 suricata
 systemd-netlogd
