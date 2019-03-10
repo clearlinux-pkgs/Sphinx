@@ -18,6 +18,7 @@ numpydoc
 openvswitch
 pyside2-setup
 pytest-cov
+python-swiftclient
 recommonmark
 repoze.sphinx.autointerface
 satyr
