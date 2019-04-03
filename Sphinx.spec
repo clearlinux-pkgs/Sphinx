@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 1.8.5
-Release  : 105
-URL      : https://files.pythonhosted.org/packages/2a/86/8e1e8400bb6eca5ed960917952600fce90599e1cb0d20ddedd81ba163370/Sphinx-1.8.5.tar.gz
-Source0  : https://files.pythonhosted.org/packages/2a/86/8e1e8400bb6eca5ed960917952600fce90599e1cb0d20ddedd81ba163370/Sphinx-1.8.5.tar.gz
-Source99 : https://files.pythonhosted.org/packages/2a/86/8e1e8400bb6eca5ed960917952600fce90599e1cb0d20ddedd81ba163370/Sphinx-1.8.5.tar.gz.asc
+Version  : 2.0.0
+Release  : 106
+URL      : https://files.pythonhosted.org/packages/de/30/9abc6d6f495744829fdc6360bb168f6a65ca1df6151ccf5eff768172d9ac/Sphinx-2.0.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/de/30/9abc6d6f495744829fdc6360bb168f6a65ca1df6151ccf5eff768172d9ac/Sphinx-2.0.0.tar.gz
+Source99 : https://files.pythonhosted.org/packages/de/30/9abc6d6f495744829fdc6360bb168f6a65ca1df6151ccf5eff768172d9ac/Sphinx-2.0.0.tar.gz.asc
 Summary  : Free open-source SQL full-text search engine.
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -30,8 +30,13 @@ Requires: python-future
 Requires: recommonmark
 Requires: requests
 Requires: setuptools
-Requires: six
 Requires: snowballstemmer
+Requires: sphinxcontrib-applehelp
+Requires: sphinxcontrib-devhelp
+Requires: sphinxcontrib-htmlhelp
+Requires: sphinxcontrib-jsmath
+Requires: sphinxcontrib-qthelp
+Requires: sphinxcontrib-serializinghtml
 Requires: sphinxcontrib-websupport
 Requires: typing
 BuildRequires : Babel
@@ -41,7 +46,6 @@ BuildRequires : Pygments
 BuildRequires : Sphinx
 BuildRequires : Whoosh
 BuildRequires : alabaster
-BuildRequires : buildreq-distutils23
 BuildRequires : buildreq-distutils3
 BuildRequires : docutils
 BuildRequires : docutils-python
@@ -56,8 +60,13 @@ BuildRequires : recommonmark
 BuildRequires : requests
 BuildRequires : setuptools
 BuildRequires : setuptools-python
-BuildRequires : six
 BuildRequires : snowballstemmer
+BuildRequires : sphinxcontrib-applehelp
+BuildRequires : sphinxcontrib-devhelp
+BuildRequires : sphinxcontrib-htmlhelp
+BuildRequires : sphinxcontrib-jsmath
+BuildRequires : sphinxcontrib-qthelp
+BuildRequires : sphinxcontrib-serializinghtml
 BuildRequires : sphinxcontrib-websupport
 BuildRequires : tox
 BuildRequires : typing
@@ -78,15 +87,6 @@ Requires: Sphinx-license = %{version}-%{release}
 
 %description bin
 bin components for the Sphinx package.
-
-
-%package legacypython
-Summary: legacypython components for the Sphinx package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the Sphinx package.
 
 
 %package license
@@ -117,25 +117,23 @@ python3 components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-1.8.5
+%setup -q -n Sphinx-2.0.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552229850
-export LDFLAGS="${LDFLAGS} -fno-lto"
-python2 setup.py build -b py2
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1554302124
+export MAKEFLAGS=%{?_smp_mflags}
+python3 setup.py build
 
 %install
-export SOURCE_DATE_EPOCH=1552229850
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Sphinx
 cp LICENSE %{buildroot}/usr/share/package-licenses/Sphinx/LICENSE
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -149,10 +147,6 @@ echo ----[ mark ]----
 /usr/bin/sphinx-autogen
 /usr/bin/sphinx-build
 /usr/bin/sphinx-quickstart
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files license
 %defattr(0644,root,root,0755)

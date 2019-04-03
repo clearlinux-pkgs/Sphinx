@@ -2,13 +2,17 @@
 Sphinx
 Theano
 casync
+ceph
 compat-hyperscan-soname4
 compat-llvm-soname4
 compat-llvm-soname6
 cyrus-sasl
+dnf
+dnf-plugins-core
 extra-cmake-modules
 hyperscan
 libabigail
+libcomps
 libdnf
 llvm
 nbsphinx
@@ -27,6 +31,7 @@ sphinx_rtd_theme
 sphinxcontrib-programoutput
 sphinxcontrib-spelling
 sphinxcontrib-trio
+stestr
 suricata
 systemd-netlogd
 varnish-cache
