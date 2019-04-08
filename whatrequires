@@ -7,6 +7,9 @@ compat-hyperscan-soname4
 compat-llvm-soname4
 compat-llvm-soname6
 cyrus-sasl
+deprecated-Sphinx
+deprecated-numpy
+deprecated-sphinx_rtd_theme
 dnf
 dnf-plugins-core
 extra-cmake-modules

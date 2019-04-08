@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 2.0.0
-Release  : 106
-URL      : https://files.pythonhosted.org/packages/de/30/9abc6d6f495744829fdc6360bb168f6a65ca1df6151ccf5eff768172d9ac/Sphinx-2.0.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/de/30/9abc6d6f495744829fdc6360bb168f6a65ca1df6151ccf5eff768172d9ac/Sphinx-2.0.0.tar.gz
-Source99 : https://files.pythonhosted.org/packages/de/30/9abc6d6f495744829fdc6360bb168f6a65ca1df6151ccf5eff768172d9ac/Sphinx-2.0.0.tar.gz.asc
+Version  : 2.0.1
+Release  : 107
+URL      : https://files.pythonhosted.org/packages/81/e3/cb726b65039569840547895e1c81759d44e50512d038268afa8c1bf2001c/Sphinx-2.0.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/81/e3/cb726b65039569840547895e1c81759d44e50512d038268afa8c1bf2001c/Sphinx-2.0.1.tar.gz
+Source99 : https://files.pythonhosted.org/packages/81/e3/cb726b65039569840547895e1c81759d44e50512d038268afa8c1bf2001c/Sphinx-2.0.1.tar.gz.asc
 Summary  : Free open-source SQL full-text search engine.
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -117,14 +117,14 @@ python3 components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-2.0.0
+%setup -q -n Sphinx-2.0.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554302124
+export SOURCE_DATE_EPOCH=1554745944
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
