@@ -1,11 +1,14 @@
 # This file contains recursive sources that require this package
+QGIS
 Sphinx
 Theano
+aria2
 casync
 ceph
 compat-hyperscan-soname4
 compat-llvm-soname4
 compat-llvm-soname6
+compat-llvm-soname7
 cyrus-sasl
 deprecated-Sphinx
 deprecated-numpy
@@ -13,6 +16,7 @@ deprecated-sphinx_rtd_theme
 dnf
 dnf-plugins-core
 extra-cmake-modules
+ghc
 hyperscan
 libabigail
 libcomps
@@ -23,6 +27,7 @@ notmuch
 numpy
 numpydoc
 openvswitch
+oslo.upgradecheck
 pyside2-setup
 pytest-cov
 python-swiftclient
@@ -38,3 +43,4 @@ stestr
 suricata
 systemd-netlogd
 varnish-cache
+zathura

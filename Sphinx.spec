@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 2.0.1
-Release  : 108
-URL      : https://files.pythonhosted.org/packages/81/e3/cb726b65039569840547895e1c81759d44e50512d038268afa8c1bf2001c/Sphinx-2.0.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/81/e3/cb726b65039569840547895e1c81759d44e50512d038268afa8c1bf2001c/Sphinx-2.0.1.tar.gz
-Source99 : https://files.pythonhosted.org/packages/81/e3/cb726b65039569840547895e1c81759d44e50512d038268afa8c1bf2001c/Sphinx-2.0.1.tar.gz.asc
+Version  : 2.1.0
+Release  : 109
+URL      : https://files.pythonhosted.org/packages/37/81/d579db8cc3de111e0927e29c820e163b32813387c6ffa60069af9636630c/Sphinx-2.1.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/37/81/d579db8cc3de111e0927e29c820e163b32813387c6ffa60069af9636630c/Sphinx-2.1.0.tar.gz
+Source99 : https://files.pythonhosted.org/packages/37/81/d579db8cc3de111e0927e29c820e163b32813387c6ffa60069af9636630c/Sphinx-2.1.0.tar.gz.asc
 Summary  : Free open-source SQL full-text search engine.
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -47,6 +47,7 @@ BuildRequires : Sphinx
 BuildRequires : Whoosh
 BuildRequires : alabaster
 BuildRequires : buildreq-distutils3
+BuildRequires : colorama
 BuildRequires : docutils
 BuildRequires : docutils-python
 BuildRequires : imagesize
@@ -56,6 +57,7 @@ BuildRequires : pluggy
 BuildRequires : py
 BuildRequires : py-python
 BuildRequires : pytest
+BuildRequires : python-future
 BuildRequires : recommonmark
 BuildRequires : requests
 BuildRequires : setuptools
@@ -73,12 +75,15 @@ BuildRequires : typing
 BuildRequires : virtualenv
 
 %description
-========
-Sphinx
-========
-.. image:: https://img.shields.io/pypi/v/sphinx.svg
-:target: https://pypi.org/project/Sphinx/
-:alt: Package on PyPI
+:orphan:
+Tutorial examples
+=================
+This directory contains a number of examples used in the tutorials. These are
+intended to be increasingly complex to demonstrate the various features of
+Sphinx, but should aim to be as complicated as necessary but no more.
+Individual sections are referenced by line numbers, meaning if you make changes
+to the source files, you should update the references in the documentation
+accordingly.
 
 %package bin
 Summary: bin components for the Sphinx package.
@@ -117,14 +122,21 @@ python3 components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-2.0.1
+%setup -q -n Sphinx-2.1.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554745944
+export SOURCE_DATE_EPOCH=1559490364
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
