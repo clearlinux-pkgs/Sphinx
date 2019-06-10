@@ -3,6 +3,7 @@ QGIS
 Sphinx
 Theano
 aria2
+cassandra
 casync
 ceph
 compat-hyperscan-soname4
