@@ -19,6 +19,7 @@ dnf-plugins-core
 extra-cmake-modules
 ghc
 hyperscan
+koji
 libabigail
 libcomps
 libdnf
@@ -28,10 +29,10 @@ notmuch
 numpy
 numpydoc
 openvswitch
+os-api-ref
 oslo.upgradecheck
 pyside2-setup
 pytest-cov
-python-swiftclient
 recommonmark
 repoze.sphinx.autointerface
 satyr
