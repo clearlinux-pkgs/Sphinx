@@ -5,12 +5,12 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 2.2.1
-Release  : 114
-URL      : https://files.pythonhosted.org/packages/f6/3a/c51fc285c0c5c30bcd9426bf096187840683d9383df716a6b6a4ca0a8bde/Sphinx-2.2.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/f6/3a/c51fc285c0c5c30bcd9426bf096187840683d9383df716a6b6a4ca0a8bde/Sphinx-2.2.1.tar.gz
-Source1 : https://files.pythonhosted.org/packages/f6/3a/c51fc285c0c5c30bcd9426bf096187840683d9383df716a6b6a4ca0a8bde/Sphinx-2.2.1.tar.gz.asc
-Summary  : Free open-source SQL full-text search engine.
+Version  : 2.2.2
+Release  : 115
+URL      : https://files.pythonhosted.org/packages/60/e8/dae78b653ef073b2a84755f755c51d39290f2f95c671671495cd2b9a4849/Sphinx-2.2.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/60/e8/dae78b653ef073b2a84755f755c51d39290f2f95c671671495cd2b9a4849/Sphinx-2.2.2.tar.gz
+Source1 : https://files.pythonhosted.org/packages/60/e8/dae78b653ef073b2a84755f755c51d39290f2f95c671671495cd2b9a4849/Sphinx-2.2.2.tar.gz.asc
+Summary  : Python documentation generator
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: Sphinx-bin = %{version}-%{release}
@@ -72,19 +72,11 @@ BuildRequires : sphinxcontrib-serializinghtml
 BuildRequires : sphinxcontrib-websupport
 BuildRequires : tox
 BuildRequires : typing
-BuildRequires : util-linux
 BuildRequires : virtualenv
 
 %description
-:orphan:
-Tutorial examples
-=================
-This directory contains a number of examples used in the tutorials. These are
-intended to be increasingly complex to demonstrate the various features of
-Sphinx, but should aim to be as complicated as necessary but no more.
-Individual sections are referenced by line numbers, meaning if you make changes
-to the source files, you should update the references in the documentation
-accordingly.
+Sphinx
+        ========
 
 %package bin
 Summary: bin components for the Sphinx package.
@@ -123,15 +115,15 @@ python3 components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-2.2.1
+%setup -q -n Sphinx-2.2.2
+cd %{_builddir}/Sphinx-2.2.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1572108311
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1575324557
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -147,7 +139,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Sphinx
-cp %{_builddir}/Sphinx-2.2.1/LICENSE %{buildroot}/usr/share/package-licenses/Sphinx/af18f178505e4b98db7dcf87908f2536117a2ecd
+cp %{_builddir}/Sphinx-2.2.2/LICENSE %{buildroot}/usr/share/package-licenses/Sphinx/af18f178505e4b98db7dcf87908f2536117a2ecd
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :

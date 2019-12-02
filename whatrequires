@@ -33,6 +33,8 @@ recommonmark
 repoze.sphinx.autointerface
 satyr
 scipy
+sos
+sphinx-feature-classification
 sphinx_rtd_theme
 sphinxcontrib-bibtex
 sphinxcontrib-programoutput
