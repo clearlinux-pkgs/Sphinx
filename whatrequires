@@ -10,6 +10,7 @@ compat-hyperscan-soname4
 compat-llvm-soname6
 compat-llvm-soname7
 cyrus-sasl
+django-nose
 dnf
 dnf-plugins-core
 extra-cmake-modules
@@ -26,9 +27,9 @@ numpy
 numpydoc
 openvswitch
 os-api-ref
-oslo.upgradecheck
 pyside2-setup
 pytest-cov
+python-swiftclient
 recommonmark
 repoze.sphinx.autointerface
 satyr
@@ -37,7 +38,9 @@ sos
 sphinx-feature-classification
 sphinx_rtd_theme
 sphinxcontrib-bibtex
+sphinxcontrib-blockdiag
 sphinxcontrib-programoutput
+sphinxcontrib-seqdiag
 sphinxcontrib-spelling
 sphinxcontrib-trio
 stestr
