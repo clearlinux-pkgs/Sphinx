@@ -43,7 +43,6 @@ sphinxcontrib-programoutput
 sphinxcontrib-seqdiag
 sphinxcontrib-spelling
 sphinxcontrib-trio
-stestr
 suricata
 systemd-netlogd
 zathura
