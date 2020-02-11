@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 2.4.0
-Release  : 121
-URL      : https://files.pythonhosted.org/packages/5d/0b/9d45b32b7cc316f70a71a5549456cdedd1e6e068feed49e1139846c67501/Sphinx-2.4.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/5d/0b/9d45b32b7cc316f70a71a5549456cdedd1e6e068feed49e1139846c67501/Sphinx-2.4.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/5d/0b/9d45b32b7cc316f70a71a5549456cdedd1e6e068feed49e1139846c67501/Sphinx-2.4.0.tar.gz.asc
+Version  : 2.4.1
+Release  : 122
+URL      : https://files.pythonhosted.org/packages/42/6b/cddf7d5af24ac73506c98dba8025e4f71cd33553f54c8bf3478a09d5fed0/Sphinx-2.4.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/42/6b/cddf7d5af24ac73506c98dba8025e4f71cd33553f54c8bf3478a09d5fed0/Sphinx-2.4.1.tar.gz
+Source1  : https://files.pythonhosted.org/packages/42/6b/cddf7d5af24ac73506c98dba8025e4f71cd33553f54c8bf3478a09d5fed0/Sphinx-2.4.1.tar.gz.asc
 Summary  : Free open-source SQL full-text search engine.
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -122,15 +122,15 @@ python3 components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-2.4.0
-cd %{_builddir}/Sphinx-2.4.0
+%setup -q -n Sphinx-2.4.1
+cd %{_builddir}/Sphinx-2.4.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581287251
+export SOURCE_DATE_EPOCH=1581450950
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -147,7 +147,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Sphinx
-cp %{_builddir}/Sphinx-2.4.0/LICENSE %{buildroot}/usr/share/package-licenses/Sphinx/af18f178505e4b98db7dcf87908f2536117a2ecd
+cp %{_builddir}/Sphinx-2.4.1/LICENSE %{buildroot}/usr/share/package-licenses/Sphinx/af18f178505e4b98db7dcf87908f2536117a2ecd
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
