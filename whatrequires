@@ -30,7 +30,6 @@ os-api-ref
 passlib
 pyside2-setup
 pytest-cov
-python-swiftclient
 recommonmark
 repoze.sphinx.autointerface
 satyr
