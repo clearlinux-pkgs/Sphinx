@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 2.4.3
-Release  : 124
+Release  : 125
 URL      : https://files.pythonhosted.org/packages/35/e2/7efb490c116fa1a06a7c4c82ae5fd1510d7098b8ca76c31c0135828906f9/Sphinx-2.4.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/35/e2/7efb490c116fa1a06a7c4c82ae5fd1510d7098b8ca76c31c0135828906f9/Sphinx-2.4.3.tar.gz
 Source1  : https://files.pythonhosted.org/packages/35/e2/7efb490c116fa1a06a7c4c82ae5fd1510d7098b8ca76c31c0135828906f9/Sphinx-2.4.3.tar.gz.asc
@@ -116,6 +116,7 @@ python components for the Sphinx package.
 Summary: python3 components for the Sphinx package.
 Group: Default
 Requires: python3-core
+Provides: pypi(Sphinx)
 
 %description python3
 python3 components for the Sphinx package.
@@ -130,7 +131,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582566568
+export SOURCE_DATE_EPOCH=1582920465
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar

@@ -3,6 +3,7 @@ QGIS
 Sphinx
 Theano
 aria2
+breathe
 cassandra
 casync
 ceph
@@ -38,6 +39,8 @@ sos
 sphinx_rtd_theme
 sphinxcontrib-bibtex
 sphinxcontrib-blockdiag
+sphinxcontrib-httpdomain
+sphinxcontrib-newsfeed
 sphinxcontrib-programoutput
 sphinxcontrib-seqdiag
 sphinxcontrib-spelling
