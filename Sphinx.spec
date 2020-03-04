@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 2.4.3
-Release  : 125
+Release  : 126
 URL      : https://files.pythonhosted.org/packages/35/e2/7efb490c116fa1a06a7c4c82ae5fd1510d7098b8ca76c31c0135828906f9/Sphinx-2.4.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/35/e2/7efb490c116fa1a06a7c4c82ae5fd1510d7098b8ca76c31c0135828906f9/Sphinx-2.4.3.tar.gz
 Source1  : https://files.pythonhosted.org/packages/35/e2/7efb490c116fa1a06a7c4c82ae5fd1510d7098b8ca76c31c0135828906f9/Sphinx-2.4.3.tar.gz.asc
@@ -117,6 +117,7 @@ Summary: python3 components for the Sphinx package.
 Group: Default
 Requires: python3-core
 Provides: pypi(Sphinx)
+Provides: pypi(sphinx)
 
 %description python3
 python3 components for the Sphinx package.
