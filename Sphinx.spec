@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 2.4.3
-Release  : 127
+Release  : 128
 URL      : https://files.pythonhosted.org/packages/35/e2/7efb490c116fa1a06a7c4c82ae5fd1510d7098b8ca76c31c0135828906f9/Sphinx-2.4.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/35/e2/7efb490c116fa1a06a7c4c82ae5fd1510d7098b8ca76c31c0135828906f9/Sphinx-2.4.3.tar.gz
 Source1  : https://files.pythonhosted.org/packages/35/e2/7efb490c116fa1a06a7c4c82ae5fd1510d7098b8ca76c31c0135828906f9/Sphinx-2.4.3.tar.gz.asc
@@ -109,23 +109,23 @@ python components for the Sphinx package.
 Summary: python3 components for the Sphinx package.
 Group: Default
 Requires: python3-core
-Provides: pypi(Sphinx)
-Requires: pypi(Jinja2)
-Requires: pypi(Pygments)
+Provides: pypi(sphinx)
 Requires: pypi(alabaster)
 Requires: pypi(babel)
 Requires: pypi(docutils)
 Requires: pypi(imagesize)
+Requires: pypi(jinja2)
 Requires: pypi(packaging)
+Requires: pypi(pygments)
 Requires: pypi(requests)
 Requires: pypi(setuptools)
 Requires: pypi(snowballstemmer)
-Requires: pypi(sphinxcontrib-applehelp)
-Requires: pypi(sphinxcontrib-devhelp)
-Requires: pypi(sphinxcontrib-htmlhelp)
-Requires: pypi(sphinxcontrib-jsmath)
-Requires: pypi(sphinxcontrib-qthelp)
-Requires: pypi(sphinxcontrib-serializinghtml)
+Requires: pypi(sphinxcontrib_applehelp)
+Requires: pypi(sphinxcontrib_devhelp)
+Requires: pypi(sphinxcontrib_htmlhelp)
+Requires: pypi(sphinxcontrib_jsmath)
+Requires: pypi(sphinxcontrib_qthelp)
+Requires: pypi(sphinxcontrib_serializinghtml)
 
 %description python3
 python3 components for the Sphinx package.
@@ -140,7 +140,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583440985
+export SOURCE_DATE_EPOCH=1583451150
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
