@@ -6,11 +6,11 @@
 #
 Name     : Sphinx
 Version  : 2.4.3
-Release  : 126
+Release  : 127
 URL      : https://files.pythonhosted.org/packages/35/e2/7efb490c116fa1a06a7c4c82ae5fd1510d7098b8ca76c31c0135828906f9/Sphinx-2.4.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/35/e2/7efb490c116fa1a06a7c4c82ae5fd1510d7098b8ca76c31c0135828906f9/Sphinx-2.4.3.tar.gz
 Source1  : https://files.pythonhosted.org/packages/35/e2/7efb490c116fa1a06a7c4c82ae5fd1510d7098b8ca76c31c0135828906f9/Sphinx-2.4.3.tar.gz.asc
-Summary  : Free open-source SQL full-text search engine.
+Summary  : Python documentation generator
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: Sphinx-bin = %{version}-%{release}
@@ -75,15 +75,8 @@ BuildRequires : typing
 BuildRequires : virtualenv
 
 %description
-:orphan:
-Tutorial examples
-=================
-This directory contains a number of examples used in the tutorials. These are
-intended to be increasingly complex to demonstrate the various features of
-Sphinx, but should aim to be as complicated as necessary but no more.
-Individual sections are referenced by line numbers, meaning if you make changes
-to the source files, you should update the references in the documentation
-accordingly.
+Sphinx
+        ========
 
 %package bin
 Summary: bin components for the Sphinx package.
@@ -117,7 +110,22 @@ Summary: python3 components for the Sphinx package.
 Group: Default
 Requires: python3-core
 Provides: pypi(Sphinx)
-Provides: pypi(sphinx)
+Requires: pypi(Jinja2)
+Requires: pypi(Pygments)
+Requires: pypi(alabaster)
+Requires: pypi(babel)
+Requires: pypi(docutils)
+Requires: pypi(imagesize)
+Requires: pypi(packaging)
+Requires: pypi(requests)
+Requires: pypi(setuptools)
+Requires: pypi(snowballstemmer)
+Requires: pypi(sphinxcontrib-applehelp)
+Requires: pypi(sphinxcontrib-devhelp)
+Requires: pypi(sphinxcontrib-htmlhelp)
+Requires: pypi(sphinxcontrib-jsmath)
+Requires: pypi(sphinxcontrib-qthelp)
+Requires: pypi(sphinxcontrib-serializinghtml)
 
 %description python3
 python3 components for the Sphinx package.
@@ -132,8 +140,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582920465
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583440985
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

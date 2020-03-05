@@ -31,12 +31,14 @@ os-api-ref
 passlib
 pyside2-setup
 pytest-cov
+pyudev
 recommonmark
 repoze.sphinx.autointerface
 satyr
 scipy
 sos
 sphinx_rtd_theme
+sphinxcontrib-apidoc
 sphinxcontrib-bibtex
 sphinxcontrib-blockdiag
 sphinxcontrib-httpdomain
