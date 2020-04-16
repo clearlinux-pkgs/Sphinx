@@ -5,12 +5,12 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 2.4.4
-Release  : 129
-URL      : https://files.pythonhosted.org/packages/d5/75/e2a582a0ce014dce99cab62f251c179712cb6c4377705deb7c9b474e4f35/Sphinx-2.4.4.tar.gz
-Source0  : https://files.pythonhosted.org/packages/d5/75/e2a582a0ce014dce99cab62f251c179712cb6c4377705deb7c9b474e4f35/Sphinx-2.4.4.tar.gz
-Source1  : https://files.pythonhosted.org/packages/d5/75/e2a582a0ce014dce99cab62f251c179712cb6c4377705deb7c9b474e4f35/Sphinx-2.4.4.tar.gz.asc
-Summary  : Free open-source SQL full-text search engine.
+Version  : 3.0.1
+Release  : 130
+URL      : https://files.pythonhosted.org/packages/70/ed/fde08cb3e1e657cd6ca383a6eff24489081d21cf4617df4e6d041db38399/Sphinx-3.0.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/70/ed/fde08cb3e1e657cd6ca383a6eff24489081d21cf4617df4e6d041db38399/Sphinx-3.0.1.tar.gz
+Source1  : https://files.pythonhosted.org/packages/70/ed/fde08cb3e1e657cd6ca383a6eff24489081d21cf4617df4e6d041db38399/Sphinx-3.0.1.tar.gz.asc
+Summary  : Python documentation generator
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: Sphinx-bin = %{version}-%{release}
@@ -75,15 +75,8 @@ BuildRequires : typing
 BuildRequires : virtualenv
 
 %description
-:orphan:
-Tutorial examples
-=================
-This directory contains a number of examples used in the tutorials. These are
-intended to be increasingly complex to demonstrate the various features of
-Sphinx, but should aim to be as complicated as necessary but no more.
-Individual sections are referenced by line numbers, meaning if you make changes
-to the source files, you should update the references in the documentation
-accordingly.
+Sphinx
+        ========
 
 %package bin
 Summary: bin components for the Sphinx package.
@@ -139,23 +132,22 @@ python3 components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-2.4.4
-cd %{_builddir}/Sphinx-2.4.4
+%setup -q -n Sphinx-3.0.1
+cd %{_builddir}/Sphinx-3.0.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583527995
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1587077057
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
@@ -164,7 +156,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Sphinx
-cp %{_builddir}/Sphinx-2.4.4/LICENSE %{buildroot}/usr/share/package-licenses/Sphinx/af18f178505e4b98db7dcf87908f2536117a2ecd
+cp %{_builddir}/Sphinx-3.0.1/LICENSE %{buildroot}/usr/share/package-licenses/Sphinx/af18f178505e4b98db7dcf87908f2536117a2ecd
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :

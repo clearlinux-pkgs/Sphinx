@@ -4,12 +4,10 @@ Sphinx
 Theano
 aria2
 breathe
-cassandra
 casync
 ceph
 compat-hyperscan-soname4
 compat-llvm-soname6
-compat-llvm-soname7
 cyrus-sasl
 django-nose
 dnf
