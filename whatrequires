@@ -20,6 +20,7 @@ libcomps
 libdnf
 llvm
 llvm8
+lockfile
 nbsphinx
 notmuch
 numpy
