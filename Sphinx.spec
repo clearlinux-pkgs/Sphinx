@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 3.0.3
-Release  : 132
+Release  : 133
 URL      : https://files.pythonhosted.org/packages/12/a9/41a67d6638323b763b284a80b57461fe3557b128efcce892360cd73879ce/Sphinx-3.0.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/12/a9/41a67d6638323b763b284a80b57461fe3557b128efcce892360cd73879ce/Sphinx-3.0.3.tar.gz
 Source1  : https://files.pythonhosted.org/packages/12/a9/41a67d6638323b763b284a80b57461fe3557b128efcce892360cd73879ce/Sphinx-3.0.3.tar.gz.asc
@@ -38,7 +38,6 @@ Requires: sphinxcontrib-jsmath
 Requires: sphinxcontrib-qthelp
 Requires: sphinxcontrib-serializinghtml
 Requires: sphinxcontrib-websupport
-Requires: typing
 BuildRequires : Babel
 BuildRequires : Jinja2
 BuildRequires : MarkupSafe
@@ -71,7 +70,6 @@ BuildRequires : sphinxcontrib-qthelp
 BuildRequires : sphinxcontrib-serializinghtml
 BuildRequires : sphinxcontrib-websupport
 BuildRequires : tox
-BuildRequires : typing
 BuildRequires : virtualenv
 
 %description
@@ -140,7 +138,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1587926295
+export SOURCE_DATE_EPOCH=1588359638
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

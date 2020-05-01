@@ -20,6 +20,7 @@ libcomps
 libdnf
 llvm
 llvm8
+llvm9
 lockfile
 nbsphinx
 notmuch

@@ -9,7 +9,6 @@ Pygments
 MarkupSafe
 nose
 Whoosh
-typing
 sphinxcontrib-websupport
 setuptools-python
 recommonmark

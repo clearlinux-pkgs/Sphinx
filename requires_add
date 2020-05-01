@@ -7,6 +7,5 @@ imagesize
 requests
 snowballstemmer
 sphinxcontrib-websupport
-typing
 recommonmark
 python-future
