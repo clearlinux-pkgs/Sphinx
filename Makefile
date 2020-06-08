@@ -1,5 +1,5 @@
 PKG_NAME := Sphinx
-URL = https://files.pythonhosted.org/packages/74/20/2909215d83e4bf925afd875fd995b71e4b34cee6ad1c7eba5d1ce74bd14c/Sphinx-3.0.4.tar.gz
+URL = https://files.pythonhosted.org/packages/57/a1/b924ff49721a12b652aaf8730340e5f0830f08450817a0e87415bc1837fd/Sphinx-3.1.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
