@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 3.1.1
-Release  : 137
-URL      : https://files.pythonhosted.org/packages/1b/2f/d53f8292784836e64125917e571b689698e838d8b88f210edef2f9c93970/Sphinx-3.1.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/1b/2f/d53f8292784836e64125917e571b689698e838d8b88f210edef2f9c93970/Sphinx-3.1.1.tar.gz
-Source1  : https://files.pythonhosted.org/packages/1b/2f/d53f8292784836e64125917e571b689698e838d8b88f210edef2f9c93970/Sphinx-3.1.1.tar.gz.asc
+Version  : 3.1.2
+Release  : 138
+URL      : https://files.pythonhosted.org/packages/4b/2b/84e00ab4c6103ebe38b3c1f0d574d46a7b8fb1dccb4d41a6ec0b9d15aacd/Sphinx-3.1.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/4b/2b/84e00ab4c6103ebe38b3c1f0d574d46a7b8fb1dccb4d41a6ec0b9d15aacd/Sphinx-3.1.2.tar.gz
+Source1  : https://files.pythonhosted.org/packages/4b/2b/84e00ab4c6103ebe38b3c1f0d574d46a7b8fb1dccb4d41a6ec0b9d15aacd/Sphinx-3.1.2.tar.gz.asc
 Summary  : Python documentation generator
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -130,15 +130,15 @@ python3 components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-3.1.1
-cd %{_builddir}/Sphinx-3.1.1
+%setup -q -n Sphinx-3.1.2
+cd %{_builddir}/Sphinx-3.1.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1592371434
+export SOURCE_DATE_EPOCH=1594053471
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -154,7 +154,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Sphinx
-cp %{_builddir}/Sphinx-3.1.1/LICENSE %{buildroot}/usr/share/package-licenses/Sphinx/af18f178505e4b98db7dcf87908f2536117a2ecd
+cp %{_builddir}/Sphinx-3.1.2/LICENSE %{buildroot}/usr/share/package-licenses/Sphinx/af18f178505e4b98db7dcf87908f2536117a2ecd
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
