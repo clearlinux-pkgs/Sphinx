@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 3.1.2
-Release  : 138
+Release  : 139
 URL      : https://files.pythonhosted.org/packages/4b/2b/84e00ab4c6103ebe38b3c1f0d574d46a7b8fb1dccb4d41a6ec0b9d15aacd/Sphinx-3.1.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4b/2b/84e00ab4c6103ebe38b3c1f0d574d46a7b8fb1dccb4d41a6ec0b9d15aacd/Sphinx-3.1.2.tar.gz
 Source1  : https://files.pythonhosted.org/packages/4b/2b/84e00ab4c6103ebe38b3c1f0d574d46a7b8fb1dccb4d41a6ec0b9d15aacd/Sphinx-3.1.2.tar.gz.asc
