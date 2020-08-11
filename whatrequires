@@ -3,11 +3,11 @@ QGIS
 Sphinx
 Theano
 aria2
+bashate
 breathe
 casync
 ceph
 compat-hyperscan-soname4
-compat-llvm-soname6
 cyrus-sasl
 django-nose
 dnf

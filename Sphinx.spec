@@ -5,14 +5,14 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 3.1.2
-Release  : 139
-URL      : https://files.pythonhosted.org/packages/4b/2b/84e00ab4c6103ebe38b3c1f0d574d46a7b8fb1dccb4d41a6ec0b9d15aacd/Sphinx-3.1.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/4b/2b/84e00ab4c6103ebe38b3c1f0d574d46a7b8fb1dccb4d41a6ec0b9d15aacd/Sphinx-3.1.2.tar.gz
-Source1  : https://files.pythonhosted.org/packages/4b/2b/84e00ab4c6103ebe38b3c1f0d574d46a7b8fb1dccb4d41a6ec0b9d15aacd/Sphinx-3.1.2.tar.gz.asc
+Version  : 3.2.0
+Release  : 140
+URL      : https://files.pythonhosted.org/packages/d6/a3/3c0e0cb802d118f7797df93ef9d456aef9b6942c59f951483b3a5f482875/Sphinx-3.2.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/d6/a3/3c0e0cb802d118f7797df93ef9d456aef9b6942c59f951483b3a5f482875/Sphinx-3.2.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/d6/a3/3c0e0cb802d118f7797df93ef9d456aef9b6942c59f951483b3a5f482875/Sphinx-3.2.0.tar.gz.asc
 Summary  : Python documentation generator
 Group    : Development/Tools
-License  : BSD-3-Clause
+License  : MIT
 Requires: Sphinx-bin = %{version}-%{release}
 Requires: Sphinx-license = %{version}-%{release}
 Requires: Sphinx-python = %{version}-%{release}
@@ -130,15 +130,15 @@ python3 components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-3.1.2
-cd %{_builddir}/Sphinx-3.1.2
+%setup -q -n Sphinx-3.2.0
+cd %{_builddir}/Sphinx-3.2.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1594053471
+export SOURCE_DATE_EPOCH=1597161146
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -154,7 +154,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Sphinx
-cp %{_builddir}/Sphinx-3.1.2/LICENSE %{buildroot}/usr/share/package-licenses/Sphinx/af18f178505e4b98db7dcf87908f2536117a2ecd
+cp %{_builddir}/Sphinx-3.2.0/LICENSE %{buildroot}/usr/share/package-licenses/Sphinx/65a5b77947ac426cc1fa580237fdb3e6c5486196
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -172,7 +172,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/Sphinx/af18f178505e4b98db7dcf87908f2536117a2ecd
+/usr/share/package-licenses/Sphinx/65a5b77947ac426cc1fa580237fdb3e6c5486196
 
 %files python
 %defattr(-,root,root,-)
