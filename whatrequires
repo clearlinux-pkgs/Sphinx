@@ -10,6 +10,7 @@ django-nose
 dnf
 dnf-plugins-core
 extra-cmake-modules
+fontforge
 ghc
 hyperscan
 libabigail
