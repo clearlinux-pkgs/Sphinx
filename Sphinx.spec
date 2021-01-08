@@ -5,16 +5,15 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 3.4.1
-Release  : 149
-URL      : https://files.pythonhosted.org/packages/4f/76/daa2e41de4e31788fc48c77d98e5113809f65b516b359503113e1b681dc0/Sphinx-3.4.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/4f/76/daa2e41de4e31788fc48c77d98e5113809f65b516b359503113e1b681dc0/Sphinx-3.4.1.tar.gz
-Source1  : https://files.pythonhosted.org/packages/4f/76/daa2e41de4e31788fc48c77d98e5113809f65b516b359503113e1b681dc0/Sphinx-3.4.1.tar.gz.asc
+Version  : 3.4.3
+Release  : 150
+URL      : https://files.pythonhosted.org/packages/7b/a6/3556d79927ed18a0b528dd7a9061921a6b2310fc65873d3077e3c62ae85f/Sphinx-3.4.3.tar.gz
+Source0  : https://files.pythonhosted.org/packages/7b/a6/3556d79927ed18a0b528dd7a9061921a6b2310fc65873d3077e3c62ae85f/Sphinx-3.4.3.tar.gz
+Source1  : https://files.pythonhosted.org/packages/7b/a6/3556d79927ed18a0b528dd7a9061921a6b2310fc65873d3077e3c62ae85f/Sphinx-3.4.3.tar.gz.asc
 Summary  : Python documentation generator
 Group    : Development/Tools
 License  : MIT
 Requires: Sphinx-bin = %{version}-%{release}
-Requires: Sphinx-license = %{version}-%{release}
 Requires: Sphinx-python = %{version}-%{release}
 Requires: Sphinx-python3 = %{version}-%{release}
 Requires: Babel
@@ -79,18 +78,9 @@ Sphinx
 %package bin
 Summary: bin components for the Sphinx package.
 Group: Binaries
-Requires: Sphinx-license = %{version}-%{release}
 
 %description bin
 bin components for the Sphinx package.
-
-
-%package license
-Summary: license components for the Sphinx package.
-Group: Default
-
-%description license
-license components for the Sphinx package.
 
 
 %package python
@@ -130,15 +120,15 @@ python3 components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-3.4.1
-cd %{_builddir}/Sphinx-3.4.1
+%setup -q -n Sphinx-3.4.3
+cd %{_builddir}/Sphinx-3.4.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1609282554
+export SOURCE_DATE_EPOCH=1610130301
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -153,8 +143,6 @@ python3 setup.py build
 %install
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/package-licenses/Sphinx
-cp %{_builddir}/Sphinx-3.4.1/LICENSE %{buildroot}/usr/share/package-licenses/Sphinx/65a5b77947ac426cc1fa580237fdb3e6c5486196
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -169,10 +157,6 @@ echo ----[ mark ]----
 /usr/bin/sphinx-autogen
 /usr/bin/sphinx-build
 /usr/bin/sphinx-quickstart
-
-%files license
-%defattr(0644,root,root,0755)
-/usr/share/package-licenses/Sphinx/65a5b77947ac426cc1fa580237fdb3e6c5486196
 
 %files python
 %defattr(-,root,root,-)
