@@ -21,7 +21,6 @@ llvm
 llvm8
 llvm9
 notmuch
-numpy
 numpydoc
 openvswitch
 pyside2-setup
