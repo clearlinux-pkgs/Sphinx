@@ -10,6 +10,7 @@ cyrus-sasl
 django-nose
 dnf
 dnf-plugins-core
+dpdk
 extra-cmake-modules
 fontforge
 ghc
