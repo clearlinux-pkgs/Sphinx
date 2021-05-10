@@ -19,6 +19,7 @@ libabigail
 libcomps
 libdnf
 llvm
+llvm10
 llvm8
 llvm9
 notmuch
