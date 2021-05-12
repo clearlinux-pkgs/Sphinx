@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 4.0.1
-Release  : 161
+Release  : 162
 URL      : https://files.pythonhosted.org/packages/53/9f/ab9ac21a877c181312c2cf26089ea4eb8181edd503dc5bcfb73aa2f34f5c/Sphinx-4.0.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/53/9f/ab9ac21a877c181312c2cf26089ea4eb8181edd503dc5bcfb73aa2f34f5c/Sphinx-4.0.1.tar.gz
 Source1  : https://files.pythonhosted.org/packages/53/9f/ab9ac21a877c181312c2cf26089ea4eb8181edd503dc5bcfb73aa2f34f5c/Sphinx-4.0.1.tar.gz.asc
@@ -71,7 +71,7 @@ BuildRequires : sphinxcontrib-serializinghtml
 BuildRequires : sphinxcontrib-websupport
 BuildRequires : tox
 BuildRequires : virtualenv
-Patch1: deps.patch
+Patch1: 0001-Support-newer-jinja.patch
 
 %description
 Sphinx
@@ -132,7 +132,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1620830903
+export SOURCE_DATE_EPOCH=1620844249
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
