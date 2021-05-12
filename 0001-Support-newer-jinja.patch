@@ -14,7 +14,7 @@ Signed-off-by: Patrick McCarty <patrick.mccarty@intel.com>
  4 files changed, 20 insertions(+), 8 deletions(-)
 
 diff --git a/CHANGES b/CHANGES
-index b7e4c7f..d3f77b8 100644
+index b7e4c7f0e..d3f77b836 100644
 --- a/CHANGES
 +++ b/CHANGES
 @@ -32,6 +32,8 @@ Dependencies
@@ -27,7 +27,7 @@ index b7e4c7f..d3f77b8 100644
  --------------------
  
 diff --git a/setup.py b/setup.py
-index 7ce37f9..b669afc 100644
+index 7ce37f9ea..b669afc00 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -21,8 +21,7 @@ install_requires = [
@@ -41,7 +41,7 @@ index 7ce37f9..b669afc 100644
      'docutils>=0.14,<0.18',
      'snowballstemmer>=1.1',
 diff --git a/sphinx/jinja2glue.py b/sphinx/jinja2glue.py
-index c239f5a..cd6e806 100644
+index c239f5a4a..cd6e8066b 100644
 --- a/sphinx/jinja2glue.py
 +++ b/sphinx/jinja2glue.py
 @@ -12,7 +12,7 @@ from os import path
@@ -87,7 +87,7 @@ index c239f5a..cd6e806 100644
          if use_i18n:
              self.environment.install_gettext_translations(builder.app.translator)
 diff --git a/sphinx/util/rst.py b/sphinx/util/rst.py
-index 82b3f6b..8103a8b 100644
+index 82b3f6bda..8103a8b10 100644
 --- a/sphinx/util/rst.py
 +++ b/sphinx/util/rst.py
 @@ -18,11 +18,17 @@ from docutils.parsers.rst import roles

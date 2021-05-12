@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 4.0.1
-Release  : 162
+Release  : 163
 URL      : https://files.pythonhosted.org/packages/53/9f/ab9ac21a877c181312c2cf26089ea4eb8181edd503dc5bcfb73aa2f34f5c/Sphinx-4.0.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/53/9f/ab9ac21a877c181312c2cf26089ea4eb8181edd503dc5bcfb73aa2f34f5c/Sphinx-4.0.1.tar.gz
 Source1  : https://files.pythonhosted.org/packages/53/9f/ab9ac21a877c181312c2cf26089ea4eb8181edd503dc5bcfb73aa2f34f5c/Sphinx-4.0.1.tar.gz.asc
@@ -72,6 +72,7 @@ BuildRequires : sphinxcontrib-websupport
 BuildRequires : tox
 BuildRequires : virtualenv
 Patch1: 0001-Support-newer-jinja.patch
+Patch2: 0002-Revert-Close-7996-manpage-Make-a-section-directory-o.patch
 
 %description
 Sphinx
@@ -126,13 +127,14 @@ python3 components for the Sphinx package.
 %setup -q -n Sphinx-4.0.1
 cd %{_builddir}/Sphinx-4.0.1
 %patch1 -p1
+%patch2 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1620844249
+export SOURCE_DATE_EPOCH=1620851106
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
