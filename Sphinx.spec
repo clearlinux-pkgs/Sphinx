@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 4.0.1
-Release  : 163
-URL      : https://files.pythonhosted.org/packages/53/9f/ab9ac21a877c181312c2cf26089ea4eb8181edd503dc5bcfb73aa2f34f5c/Sphinx-4.0.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/53/9f/ab9ac21a877c181312c2cf26089ea4eb8181edd503dc5bcfb73aa2f34f5c/Sphinx-4.0.1.tar.gz
-Source1  : https://files.pythonhosted.org/packages/53/9f/ab9ac21a877c181312c2cf26089ea4eb8181edd503dc5bcfb73aa2f34f5c/Sphinx-4.0.1.tar.gz.asc
+Version  : 4.0.2
+Release  : 164
+URL      : https://files.pythonhosted.org/packages/8d/4d/8a80613d0ceefca5a84e2e30b29da7719d429b4adcdb793d86079fad3790/Sphinx-4.0.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/8d/4d/8a80613d0ceefca5a84e2e30b29da7719d429b4adcdb793d86079fad3790/Sphinx-4.0.2.tar.gz
+Source1  : https://files.pythonhosted.org/packages/8d/4d/8a80613d0ceefca5a84e2e30b29da7719d429b4adcdb793d86079fad3790/Sphinx-4.0.2.tar.gz.asc
 Summary  : Python documentation generator
 Group    : Development/Tools
 License  : MIT
@@ -18,7 +18,6 @@ Requires: Sphinx-python = %{version}-%{release}
 Requires: Sphinx-python3 = %{version}-%{release}
 Requires: Babel
 Requires: Jinja2
-Requires: MarkupSafe
 Requires: Pygments
 Requires: Whoosh
 Requires: alabaster
@@ -71,8 +70,6 @@ BuildRequires : sphinxcontrib-serializinghtml
 BuildRequires : sphinxcontrib-websupport
 BuildRequires : tox
 BuildRequires : virtualenv
-Patch1: 0001-Support-newer-jinja.patch
-Patch2: 0002-Revert-Close-7996-manpage-Make-a-section-directory-o.patch
 
 %description
 Sphinx
@@ -106,7 +103,6 @@ Requires: pypi(babel)
 Requires: pypi(docutils)
 Requires: pypi(imagesize)
 Requires: pypi(jinja2)
-Requires: pypi(markupsafe)
 Requires: pypi(packaging)
 Requires: pypi(pygments)
 Requires: pypi(requests)
@@ -124,17 +120,15 @@ python3 components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-4.0.1
-cd %{_builddir}/Sphinx-4.0.1
-%patch1 -p1
-%patch2 -p1
+%setup -q -n Sphinx-4.0.2
+cd %{_builddir}/Sphinx-4.0.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1620851106
+export SOURCE_DATE_EPOCH=1622064519
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
