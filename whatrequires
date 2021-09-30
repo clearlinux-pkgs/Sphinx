@@ -28,6 +28,8 @@ openvswitch
 pyside2-setup
 pytest-cov
 pyudev
+qemu
+qemu-guest-additions
 recommonmark
 scipy
 sos
