@@ -22,9 +22,11 @@ llvm
 llvm10
 llvm8
 llvm9
+mkl-dnn
 notmuch
 numpydoc
 openvswitch
+pbr
 pyside2-setup
 pytest-cov
 pyudev
@@ -43,3 +45,4 @@ sphinxcontrib-seqdiag
 sshtunnel
 suricata
 zathura
+zeek
