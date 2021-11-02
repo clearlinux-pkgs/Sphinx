@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 4.2.0
-Release  : 166
+Release  : 167
 URL      : https://files.pythonhosted.org/packages/c4/55/38d9661f2eca2a0d4cf891de61d8f9bdc9e8711b473012f36d90009677c5/Sphinx-4.2.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c4/55/38d9661f2eca2a0d4cf891de61d8f9bdc9e8711b473012f36d90009677c5/Sphinx-4.2.0.tar.gz
 Source1  : https://files.pythonhosted.org/packages/c4/55/38d9661f2eca2a0d4cf891de61d8f9bdc9e8711b473012f36d90009677c5/Sphinx-4.2.0.tar.gz.asc
@@ -132,7 +132,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1635460493
+export SOURCE_DATE_EPOCH=1635877628
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -142,12 +142,14 @@ export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
 export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 export MAKEFLAGS=%{?_smp_mflags}
+pypi-dep-fix.py . docutils
 python3 setup.py build
 
 %install
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 python3 -tt setup.py build  install --root=%{buildroot}
+pypi-dep-fix.py %{buildroot} docutils
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----

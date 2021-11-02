@@ -32,6 +32,7 @@ pytest-cov
 pyudev
 qemu
 qemu-guest-additions
+qt6base
 recommonmark
 scipy
 sos
