@@ -33,7 +33,6 @@ pyudev
 qemu
 qemu-guest-additions
 qt6base
-recommonmark
 scipy
 sos
 sphinx_rtd_theme

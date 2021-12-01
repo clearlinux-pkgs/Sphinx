@@ -5,68 +5,56 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 4.3.0
-Release  : 168
-URL      : https://files.pythonhosted.org/packages/45/14/8a3bf633c8141bd58e027f36fc5e775da308c635437eb45f13d1633915ea/Sphinx-4.3.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/45/14/8a3bf633c8141bd58e027f36fc5e775da308c635437eb45f13d1633915ea/Sphinx-4.3.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/45/14/8a3bf633c8141bd58e027f36fc5e775da308c635437eb45f13d1633915ea/Sphinx-4.3.0.tar.gz.asc
+Version  : 4.3.1
+Release  : 169
+URL      : https://files.pythonhosted.org/packages/2b/73/a12887680688cc9a2ca0efb404fa2ee2be768f9a9143b758e53fef5db858/Sphinx-4.3.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/2b/73/a12887680688cc9a2ca0efb404fa2ee2be768f9a9143b758e53fef5db858/Sphinx-4.3.1.tar.gz
+Source1  : https://files.pythonhosted.org/packages/2b/73/a12887680688cc9a2ca0efb404fa2ee2be768f9a9143b758e53fef5db858/Sphinx-4.3.1.tar.gz.asc
 Summary  : Python documentation generator
 Group    : Development/Tools
 License  : MIT
 Requires: Sphinx-bin = %{version}-%{release}
 Requires: Sphinx-python = %{version}-%{release}
 Requires: Sphinx-python3 = %{version}-%{release}
-Requires: Babel
-Requires: Jinja2
-Requires: Pygments
 Requires: Whoosh
 Requires: alabaster
-Requires: colorama
 Requires: docutils
 Requires: imagesize
-Requires: packaging
 Requires: python-future
 Requires: recommonmark
 Requires: requests
-Requires: setuptools
 Requires: snowballstemmer
-Requires: sphinxcontrib-applehelp
-Requires: sphinxcontrib-devhelp
-Requires: sphinxcontrib-htmlhelp
-Requires: sphinxcontrib-jsmath
-Requires: sphinxcontrib-qthelp
-Requires: sphinxcontrib-serializinghtml
 Requires: sphinxcontrib-websupport
-BuildRequires : Babel
 BuildRequires : Jinja2
 BuildRequires : MarkupSafe
 BuildRequires : Pygments
 BuildRequires : Sphinx
 BuildRequires : Whoosh
-BuildRequires : alabaster
 BuildRequires : buildreq-distutils3
-BuildRequires : colorama
-BuildRequires : docutils
 BuildRequires : docutils-python
-BuildRequires : imagesize
 BuildRequires : nose
-BuildRequires : packaging
 BuildRequires : pluggy
 BuildRequires : py
 BuildRequires : py-python
+BuildRequires : pypi(alabaster)
+BuildRequires : pypi(babel)
+BuildRequires : pypi(docutils)
+BuildRequires : pypi(imagesize)
+BuildRequires : pypi(jinja2)
+BuildRequires : pypi(packaging)
+BuildRequires : pypi(pygments)
+BuildRequires : pypi(requests)
+BuildRequires : pypi(setuptools)
+BuildRequires : pypi(snowballstemmer)
+BuildRequires : pypi(sphinxcontrib_applehelp)
+BuildRequires : pypi(sphinxcontrib_devhelp)
+BuildRequires : pypi(sphinxcontrib_htmlhelp)
+BuildRequires : pypi(sphinxcontrib_jsmath)
+BuildRequires : pypi(sphinxcontrib_qthelp)
+BuildRequires : pypi(sphinxcontrib_serializinghtml)
 BuildRequires : pytest
-BuildRequires : python-future
 BuildRequires : recommonmark
-BuildRequires : requests
-BuildRequires : setuptools
 BuildRequires : setuptools-python
-BuildRequires : snowballstemmer
-BuildRequires : sphinxcontrib-applehelp
-BuildRequires : sphinxcontrib-devhelp
-BuildRequires : sphinxcontrib-htmlhelp
-BuildRequires : sphinxcontrib-jsmath
-BuildRequires : sphinxcontrib-qthelp
-BuildRequires : sphinxcontrib-serializinghtml
 BuildRequires : sphinxcontrib-websupport
 BuildRequires : tox
 BuildRequires : virtualenv
@@ -124,15 +112,15 @@ python3 components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-4.3.0
-cd %{_builddir}/Sphinx-4.3.0
+%setup -q -n Sphinx-4.3.1
+cd %{_builddir}/Sphinx-4.3.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1636588830
+export SOURCE_DATE_EPOCH=1638374544
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
