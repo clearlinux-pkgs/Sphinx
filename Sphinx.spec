@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : Sphinx
-Version  : 4.3.1
-Release  : 170
-URL      : https://files.pythonhosted.org/packages/2b/73/a12887680688cc9a2ca0efb404fa2ee2be768f9a9143b758e53fef5db858/Sphinx-4.3.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/2b/73/a12887680688cc9a2ca0efb404fa2ee2be768f9a9143b758e53fef5db858/Sphinx-4.3.1.tar.gz
-Source1  : https://files.pythonhosted.org/packages/2b/73/a12887680688cc9a2ca0efb404fa2ee2be768f9a9143b758e53fef5db858/Sphinx-4.3.1.tar.gz.asc
+Version  : 4.3.2
+Release  : 171
+URL      : https://files.pythonhosted.org/packages/5f/70/83589844bd82a5de3a748757fb39b2440435716e6a295827b13967dfa97f/Sphinx-4.3.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/5f/70/83589844bd82a5de3a748757fb39b2440435716e6a295827b13967dfa97f/Sphinx-4.3.2.tar.gz
+Source1  : https://files.pythonhosted.org/packages/5f/70/83589844bd82a5de3a748757fb39b2440435716e6a295827b13967dfa97f/Sphinx-4.3.2.tar.gz.asc
 Summary  : Python documentation generator
 Group    : Development/Tools
 License  : MIT
@@ -112,15 +112,15 @@ python3 components for the Sphinx package.
 
 
 %prep
-%setup -q -n Sphinx-4.3.1
-cd %{_builddir}/Sphinx-4.3.1
+%setup -q -n Sphinx-4.3.2
+cd %{_builddir}/Sphinx-4.3.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1638374544
+export SOURCE_DATE_EPOCH=1639947466
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

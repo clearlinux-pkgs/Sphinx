@@ -33,15 +33,12 @@ pyudev
 qemu
 qemu-guest-additions
 qt6base
-scipy
 sos
 sphinx_rtd_theme
 sphinxcontrib-apidoc
-sphinxcontrib-blockdiag
 sphinxcontrib-httpdomain
 sphinxcontrib-newsfeed
 sphinxcontrib-programoutput
-sphinxcontrib-seqdiag
 sshtunnel
 suricata
 zathura
