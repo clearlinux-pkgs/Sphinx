@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 4.3.2
-Release  : 171
+Release  : 172
 URL      : https://files.pythonhosted.org/packages/5f/70/83589844bd82a5de3a748757fb39b2440435716e6a295827b13967dfa97f/Sphinx-4.3.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/5f/70/83589844bd82a5de3a748757fb39b2440435716e6a295827b13967dfa97f/Sphinx-4.3.2.tar.gz
 Source1  : https://files.pythonhosted.org/packages/5f/70/83589844bd82a5de3a748757fb39b2440435716e6a295827b13967dfa97f/Sphinx-4.3.2.tar.gz.asc
@@ -17,9 +17,9 @@ Requires: Sphinx-bin = %{version}-%{release}
 Requires: Sphinx-python = %{version}-%{release}
 Requires: Sphinx-python3 = %{version}-%{release}
 Requires: Whoosh
-Requires: alabaster
 Requires: docutils
 Requires: imagesize
+Requires: pypi(alabaster)
 Requires: python-future
 Requires: recommonmark
 Requires: requests
@@ -120,7 +120,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1639947466
+export SOURCE_DATE_EPOCH=1641401231
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
