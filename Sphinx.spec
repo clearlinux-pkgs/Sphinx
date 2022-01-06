@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 4.3.2
-Release  : 172
+Release  : 173
 URL      : https://files.pythonhosted.org/packages/5f/70/83589844bd82a5de3a748757fb39b2440435716e6a295827b13967dfa97f/Sphinx-4.3.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/5f/70/83589844bd82a5de3a748757fb39b2440435716e6a295827b13967dfa97f/Sphinx-4.3.2.tar.gz
 Source1  : https://files.pythonhosted.org/packages/5f/70/83589844bd82a5de3a748757fb39b2440435716e6a295827b13967dfa97f/Sphinx-4.3.2.tar.gz.asc
@@ -33,16 +33,17 @@ BuildRequires : Whoosh
 BuildRequires : buildreq-distutils3
 BuildRequires : docutils-python
 BuildRequires : nose
-BuildRequires : pluggy
 BuildRequires : py
-BuildRequires : py-python
 BuildRequires : pypi(alabaster)
 BuildRequires : pypi(babel)
 BuildRequires : pypi(docutils)
 BuildRequires : pypi(imagesize)
 BuildRequires : pypi(jinja2)
 BuildRequires : pypi(packaging)
+BuildRequires : pypi(pluggy)
+BuildRequires : pypi(py)
 BuildRequires : pypi(pygments)
+BuildRequires : pypi(pytest)
 BuildRequires : pypi(requests)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(snowballstemmer)
@@ -52,12 +53,12 @@ BuildRequires : pypi(sphinxcontrib_htmlhelp)
 BuildRequires : pypi(sphinxcontrib_jsmath)
 BuildRequires : pypi(sphinxcontrib_qthelp)
 BuildRequires : pypi(sphinxcontrib_serializinghtml)
+BuildRequires : pypi(tox)
+BuildRequires : pypi(virtualenv)
 BuildRequires : pytest
 BuildRequires : recommonmark
 BuildRequires : setuptools-python
 BuildRequires : sphinxcontrib-websupport
-BuildRequires : tox
-BuildRequires : virtualenv
 
 %description
 ========
@@ -120,7 +121,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641401231
+export SOURCE_DATE_EPOCH=1641429304
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

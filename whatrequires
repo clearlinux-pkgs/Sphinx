@@ -34,12 +34,7 @@ qemu
 qemu-guest-additions
 qt6base
 sos
-sphinx_rtd_theme
-sphinxcontrib-apidoc
-sphinxcontrib-httpdomain
 sphinxcontrib-newsfeed
-sphinxcontrib-programoutput
-sshtunnel
 suricata
 zathura
 zeek
