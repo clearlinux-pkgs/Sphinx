@@ -2,10 +2,10 @@
 # picked up automatically. One name per line, no whitespace.
 Whoosh
 pypi(alabaster)
-docutils
-imagesize
-requests
-snowballstemmer
-sphinxcontrib-websupport
-recommonmark
-python-future
+pypi(docutils)
+pypi(imagesize)
+pypi(requests)
+pypi(snowballstemmer)
+pypi(sphinxcontrib_websupport)
+pypi(recommonmark)
+pypi(future)

@@ -1,14 +1,14 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-pytest
-py
+pypi(pytest)
+pypi(py)
 docutils-python
-Sphinx
-Jinja2
-Pygments
-MarkupSafe
-nose
+pypi(sphinx)
+pypi(jinja2)
+pypi(pygments)
+pypi(markupsafe)
+pypi(nose)
 Whoosh
-sphinxcontrib-websupport
+pypi(sphinxcontrib_websupport)
 setuptools-python
-recommonmark
+pypi(recommonmark)
