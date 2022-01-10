@@ -1,6 +1,6 @@
 Name     : Sphinx
 Version  : 4.3.2
-Release  : 175
+Release  : 176
 Summary  : Python documentation generator
 Group    : Development/Tools
 License  : MIT
