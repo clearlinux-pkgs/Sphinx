@@ -1,13 +1,9 @@
 # This file contains recursive sources that require this package
 Pacemaker
 QGIS
-Sphinx
-Theano
 aria2
 casync
-ceph
 cyrus-sasl
-django-nose
 dnf
 dnf-plugins-core
 dpdk
@@ -24,17 +20,8 @@ llvm8
 llvm9
 mkl-dnn
 notmuch
-numpydoc
 openvswitch
-pbr
-pyside2-setup
-pytest-cov
-pyudev
-qemu
-qemu-guest-additions
-qt6base
+pypi-pbr
 sos
-sphinxcontrib-newsfeed
 suricata
 zathura
-zeek

@@ -6,7 +6,7 @@
 #
 Name     : Sphinx
 Version  : 4.3.2
-Release  : 173
+Release  : 174
 URL      : https://files.pythonhosted.org/packages/5f/70/83589844bd82a5de3a748757fb39b2440435716e6a295827b13967dfa97f/Sphinx-4.3.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/5f/70/83589844bd82a5de3a748757fb39b2440435716e6a295827b13967dfa97f/Sphinx-4.3.2.tar.gz
 Source1  : https://files.pythonhosted.org/packages/5f/70/83589844bd82a5de3a748757fb39b2440435716e6a295827b13967dfa97f/Sphinx-4.3.2.tar.gz.asc
@@ -17,48 +17,45 @@ Requires: Sphinx-bin = %{version}-%{release}
 Requires: Sphinx-python = %{version}-%{release}
 Requires: Sphinx-python3 = %{version}-%{release}
 Requires: Whoosh
-Requires: docutils
-Requires: imagesize
 Requires: pypi(alabaster)
-Requires: python-future
-Requires: recommonmark
-Requires: requests
-Requires: snowballstemmer
-Requires: sphinxcontrib-websupport
-BuildRequires : Jinja2
-BuildRequires : MarkupSafe
-BuildRequires : Pygments
-BuildRequires : Sphinx
+Requires: pypi(docutils)
+Requires: pypi(future)
+Requires: pypi(imagesize)
+Requires: pypi(recommonmark)
+Requires: pypi(requests)
+Requires: pypi(snowballstemmer)
+Requires: pypi(sphinxcontrib_websupport)
 BuildRequires : Whoosh
 BuildRequires : buildreq-distutils3
 BuildRequires : docutils-python
-BuildRequires : nose
-BuildRequires : py
 BuildRequires : pypi(alabaster)
 BuildRequires : pypi(babel)
 BuildRequires : pypi(docutils)
 BuildRequires : pypi(imagesize)
 BuildRequires : pypi(jinja2)
+BuildRequires : pypi(markupsafe)
+BuildRequires : pypi(nose)
 BuildRequires : pypi(packaging)
-BuildRequires : pypi(pluggy)
 BuildRequires : pypi(py)
 BuildRequires : pypi(pygments)
 BuildRequires : pypi(pytest)
+BuildRequires : pypi(recommonmark)
 BuildRequires : pypi(requests)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(snowballstemmer)
+BuildRequires : pypi(sphinx)
 BuildRequires : pypi(sphinxcontrib_applehelp)
 BuildRequires : pypi(sphinxcontrib_devhelp)
 BuildRequires : pypi(sphinxcontrib_htmlhelp)
 BuildRequires : pypi(sphinxcontrib_jsmath)
 BuildRequires : pypi(sphinxcontrib_qthelp)
 BuildRequires : pypi(sphinxcontrib_serializinghtml)
-BuildRequires : pypi(tox)
-BuildRequires : pypi(virtualenv)
-BuildRequires : pytest
-BuildRequires : recommonmark
+BuildRequires : pypi(sphinxcontrib_websupport)
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 BuildRequires : setuptools-python
-BuildRequires : sphinxcontrib-websupport
 
 %description
 ========
@@ -121,7 +118,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641429304
+export SOURCE_DATE_EPOCH=1641838333
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
