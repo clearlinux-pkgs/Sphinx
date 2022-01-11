@@ -1,6 +1,6 @@
 Name     : Sphinx
 Version  : 4.3.2
-Release  : 176
+Release  : 177
 Summary  : Python documentation generator
 Group    : Development/Tools
 License  : MIT
@@ -13,3 +13,11 @@ Sphinx
 .. image:: https://img.shields.io/pypi/v/sphinx.svg
 :target: https://pypi.org/project/Sphinx/
 :alt: Package on PyPI
+
+%prep
+
+%build
+
+%install
+
+%files
