@@ -1,10 +1,10 @@
 Name     : Sphinx
 Version  : 4.3.2
-Release  : 177
+Release  : 178
 Summary  : Python documentation generator
 Group    : Development/Tools
 License  : MIT
-Requires: sphinx
+Requires: pypi-sphinx
 
 %description
 ========
